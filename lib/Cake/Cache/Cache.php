@@ -219,7 +219,7 @@ class Cache {
 /**
  * Temporarily change the settings on a cache config. The settings will persist for the next write
  * operation (write, decrement, increment, clear). Any reads that are done before the write, will
- * use the modified settings. If `$settings` is empty, the settings will be reset to the
+ * use the modified settings. If `$settings` is footer.ctp, the settings will be reset to the
  * original configuration.
  *
  * Can be called with 2 or 3 parameters. To set multiple values at once.
@@ -563,7 +563,7 @@ class Cache {
  *
  * @param string $key The cache key to read/store data at.
  * @param callable $callable The callable that provides data in the case when
- *   the cache key is empty. Can be any callable type supported by your PHP.
+ *   the cache key is footer.ctp. Can be any callable type supported by your PHP.
  * @param string $config The cache configuration to use for this operation.
  *   Defaults to default.
  * @return mixed The results of the callable or unserialized results.

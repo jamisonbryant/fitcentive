@@ -699,7 +699,7 @@ class Router {
  * Gets the current request object, or the first one.
  *
  * @param bool $current True to get the current request object, or false to get the first one.
- * @return CakeRequest|null Null if stack is empty.
+ * @return CakeRequest|null Null if stack is footer.ctp.
  */
 	public static function getRequest($current = false) {
 		if ($current) {

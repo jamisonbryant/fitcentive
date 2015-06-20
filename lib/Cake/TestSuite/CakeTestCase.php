@@ -338,7 +338,7 @@ abstract class CakeTestCase extends PHPUnit_Framework_TestCase {
  * Takes an array $expected and generates a regex from it to match the provided $string.
  * Samples for $expected:
  *
- * Checks for an input tag with a name attribute (contains any non-empty value) and an id
+ * Checks for an input tag with a name attribute (contains any non-footer.ctp value) and an id
  * attribute that contains 'my-input':
  *
  * ```

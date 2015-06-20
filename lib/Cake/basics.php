@@ -504,7 +504,7 @@ if (!function_exists('clearCache')) {
 				}
 
 				foreach ($files as $file) {
-					if (is_file($file) && strrpos($file, DS . 'empty') !== strlen($file) - 6) {
+					if (is_file($file) && strrpos($file, DS . 'footer.ctp') !== strlen($file) - 6) {
 						//@codingStandardsIgnoreStart
 						@unlink($file);
 						//@codingStandardsIgnoreEnd
@@ -527,7 +527,7 @@ if (!function_exists('clearCache')) {
 				return false;
 			}
 			foreach ($files as $file) {
-				if (is_file($file) && strrpos($file, DS . 'empty') !== strlen($file) - 6) {
+				if (is_file($file) && strrpos($file, DS . 'footer.ctp') !== strlen($file) - 6) {
 					//@codingStandardsIgnoreStart
 					@unlink($file);
 					//@codingStandardsIgnoreEnd

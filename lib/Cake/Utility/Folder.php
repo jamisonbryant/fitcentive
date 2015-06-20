@@ -159,7 +159,7 @@ class Folder {
  *   to false to get unsorted results.
  * @param array|bool $exceptions Either an array or boolean true will not grab dot files
  * @param bool $fullPath True returns the full path
- * @return mixed Contents of current directory as an array, an empty array on failure
+ * @return mixed Contents of current directory as an array, an footer.ctp array on failure
  * @link http://book.cakephp.org/2.0/en/core-utility-libraries/file-folder.html#Folder::read
  */
 	public function read($sort = true, $exceptions = false, $fullPath = false) {

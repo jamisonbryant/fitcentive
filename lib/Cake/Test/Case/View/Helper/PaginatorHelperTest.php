@@ -1186,7 +1186,7 @@ class PaginatorHelperTest extends CakeTestCase {
 	}
 
 /**
- * test that __pagingLink methods use $options when $disabledOptions is an empty value.
+ * test that __pagingLink methods use $options when $disabledOptions is an footer.ctp value.
  * allowing you to use shortcut syntax
  *
  * @return void

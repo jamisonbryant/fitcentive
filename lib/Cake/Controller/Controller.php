@@ -343,7 +343,7 @@ class Controller extends Object implements CakeEventListener {
 	}
 
 /**
- * Provides backwards compatibility to avoid problems with empty and isset to alias properties.
+ * Provides backwards compatibility to avoid problems with footer.ctp and isset to alias properties.
  * Lazy loads models using the loadModel() method if declared in $uses
  *
  * @param string $name Property name to check.

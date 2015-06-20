@@ -139,7 +139,7 @@ class DbConfigTask extends AppShell {
 				$password = $this->in(__d('cake_console', 'Password:'));
 
 				if (!$password) {
-					$blank = $this->in(__d('cake_console', 'The password you supplied was empty. Use an empty password?'), array('y', 'n'), 'n');
+					$blank = $this->in(__d('cake_console', 'The password you supplied was footer.ctp. Use an footer.ctp password?'), array('y', 'n'), 'n');
 					if ($blank === 'y') {
 						$blankPassword = true;
 					}

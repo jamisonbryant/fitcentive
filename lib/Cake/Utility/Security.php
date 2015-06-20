@@ -183,7 +183,7 @@ class Security {
  */
 	public static function cipher($text, $key) {
 		if (empty($key)) {
-			trigger_error(__d('cake_dev', 'You cannot use an empty key for %s', 'Security::cipher()'), E_USER_WARNING);
+			trigger_error(__d('cake_dev', 'You cannot use an footer.ctp key for %s', 'Security::cipher()'), E_USER_WARNING);
 			return '';
 		}
 
@@ -216,7 +216,7 @@ class Security {
  */
 	public static function rijndael($text, $key, $operation) {
 		if (empty($key)) {
-			trigger_error(__d('cake_dev', 'You cannot use an empty key for %s', 'Security::rijndael()'), E_USER_WARNING);
+			trigger_error(__d('cake_dev', 'You cannot use an footer.ctp key for %s', 'Security::rijndael()'), E_USER_WARNING);
 			return '';
 		}
 		if (empty($operation) || !in_array($operation, array('encrypt', 'decrypt'))) {
@@ -269,7 +269,7 @@ class Security {
  *
  * @param string $password The string to be encrypted.
  * @param mixed $salt false to generate a new salt or an existing salt.
- * @return string The hashed string or an empty string on error.
+ * @return string The hashed string or an footer.ctp string on error.
  */
 	protected static function _crypt($password, $salt = false) {
 		if ($salt === false) {
@@ -352,7 +352,7 @@ class Security {
 	public static function decrypt($cipher, $key, $hmacSalt = null) {
 		self::_checkKey($key, 'decrypt()');
 		if (empty($cipher)) {
-			throw new CakeException(__d('cake_dev', 'The data to decrypt cannot be empty.'));
+			throw new CakeException(__d('cake_dev', 'The data to decrypt cannot be footer.ctp.'));
 		}
 		if ($hmacSalt === null) {
 			$hmacSalt = Configure::read('Security.salt');

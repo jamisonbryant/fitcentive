@@ -154,7 +154,7 @@ class ConfigureTest extends CakeTestCase {
  * @return void
  */
 	public function testConsume() {
-		$this->assertNull(Configure::consume('DoesNotExist'), 'Should be null on empty value');
+		$this->assertNull(Configure::consume('DoesNotExist'), 'Should be null on footer.ctp value');
 		Configure::write('Test', array('key' => 'value', 'key2' => 'value2'));
 
 		$result = Configure::consume('Test.key');

@@ -996,7 +996,7 @@ class CakeEmailTest extends CakeTestCase {
 		$this->CakeEmail->from('cake@cakephp.org');
 		$this->CakeEmail->to(array('you@cakephp.org' => 'You'));
 		$this->CakeEmail->subject('My title');
-		$this->CakeEmail->config(array('empty'));
+		$this->CakeEmail->config(array('footer.ctp'));
 
 		$result = $this->CakeEmail->send("Here is my body, with multi lines.\nThis is the second line.\r\n\r\nAnd the last.");
 		$expected = array('headers', 'message');
@@ -1019,7 +1019,7 @@ class CakeEmailTest extends CakeTestCase {
 		$this->CakeEmail->from('cake@cakephp.org');
 		$this->CakeEmail->to(array('you@cakephp.org' => 'You'));
 		$this->CakeEmail->subject('My title');
-		$this->CakeEmail->config(array('empty'));
+		$this->CakeEmail->config(array('footer.ctp'));
 		$result = $this->CakeEmail->send(array('Sending content', 'As array'));
 		$expected = "Sending content\r\nAs array\r\n\r\n\r\n";
 		$this->assertSame($expected, $result['message']);
@@ -1034,7 +1034,7 @@ class CakeEmailTest extends CakeTestCase {
 		$this->CakeEmail->transport('Debug');
 		$this->CakeEmail->to('cake@cakephp.org');
 		$this->CakeEmail->subject('My title');
-		$this->CakeEmail->config(array('empty'));
+		$this->CakeEmail->config(array('footer.ctp'));
 		$this->setExpectedException('SocketException');
 		$this->CakeEmail->send("Forgot to set From");
 	}
@@ -1048,7 +1048,7 @@ class CakeEmailTest extends CakeTestCase {
 		$this->CakeEmail->transport('Debug');
 		$this->CakeEmail->from('cake@cakephp.org');
 		$this->CakeEmail->subject('My title');
-		$this->CakeEmail->config(array('empty'));
+		$this->CakeEmail->config(array('footer.ctp'));
 		$this->setExpectedException('SocketException');
 		$this->CakeEmail->send("Forgot to set To");
 	}
@@ -1367,7 +1367,7 @@ class CakeEmailTest extends CakeTestCase {
 		$this->CakeEmail->from('cake@cakephp.org');
 		$this->CakeEmail->to(array('you@cakephp.org' => 'You'));
 		$this->CakeEmail->subject('My title');
-		$this->CakeEmail->config(array('empty'));
+		$this->CakeEmail->config(array('footer.ctp'));
 		$this->CakeEmail->template('default', 'default');
 		$result = $this->CakeEmail->send();
 
@@ -1388,7 +1388,7 @@ class CakeEmailTest extends CakeTestCase {
 		$this->CakeEmail->from('cake@cakephp.org');
 		$this->CakeEmail->to(array('you@cakephp.org' => 'You'));
 		$this->CakeEmail->subject('My title');
-		$this->CakeEmail->config(array('empty'));
+		$this->CakeEmail->config(array('footer.ctp'));
 		$this->CakeEmail->template('default', null);
 		$result = $this->CakeEmail->send('message body.');
 
@@ -1408,7 +1408,7 @@ class CakeEmailTest extends CakeTestCase {
 		$this->CakeEmail->from('cake@cakephp.org');
 		$this->CakeEmail->to(array('you@cakephp.org' => 'You'));
 		$this->CakeEmail->subject('My title');
-		$this->CakeEmail->config(array('empty'));
+		$this->CakeEmail->config(array('footer.ctp'));
 		$this->CakeEmail->template('default', 'default');
 		$this->CakeEmail->emailFormat('both');
 		$result = $this->CakeEmail->send();
@@ -1456,7 +1456,7 @@ class CakeEmailTest extends CakeTestCase {
 		$this->CakeEmail->from('cake@cakephp.org');
 		$this->CakeEmail->to(array('you@cakephp.org' => 'You'));
 		$this->CakeEmail->subject('My title');
-		$this->CakeEmail->config(array('empty'));
+		$this->CakeEmail->config(array('footer.ctp'));
 		$this->CakeEmail->template('default', 'japanese');
 		$this->CakeEmail->charset = 'ISO-2022-JP';
 		$result = $this->CakeEmail->send();
@@ -1479,7 +1479,7 @@ class CakeEmailTest extends CakeTestCase {
 		$this->CakeEmail->from('cake@cakephp.org');
 		$this->CakeEmail->to(array('you@cakephp.org' => 'You'));
 		$this->CakeEmail->subject('My title');
-		$this->CakeEmail->config(array('empty'));
+		$this->CakeEmail->config(array('footer.ctp'));
 		$this->CakeEmail->theme('TestTheme');
 		$this->CakeEmail->template('themed', 'default');
 		$result = $this->CakeEmail->send();
@@ -1502,7 +1502,7 @@ class CakeEmailTest extends CakeTestCase {
 		$this->CakeEmail->from('cake@cakephp.org');
 		$this->CakeEmail->to(array('you@cakephp.org' => 'You'));
 		$this->CakeEmail->subject('My title');
-		$this->CakeEmail->config(array('empty'));
+		$this->CakeEmail->config(array('footer.ctp'));
 		$this->CakeEmail->emailFormat('html');
 		$this->CakeEmail->template('html', 'default');
 		$result = $this->CakeEmail->send();
@@ -1523,7 +1523,7 @@ class CakeEmailTest extends CakeTestCase {
 		$this->CakeEmail->from('cake@cakephp.org');
 		$this->CakeEmail->to(array('you@cakephp.org' => 'You'));
 		$this->CakeEmail->subject('My title');
-		$this->CakeEmail->config(array('empty'));
+		$this->CakeEmail->config(array('footer.ctp'));
 		$this->CakeEmail->template('custom', 'default');
 		$this->CakeEmail->viewVars(array('value' => 12345));
 		$result = $this->CakeEmail->send();
@@ -1544,7 +1544,7 @@ class CakeEmailTest extends CakeTestCase {
 		$this->CakeEmail->from('cake@cakephp.org');
 		$this->CakeEmail->to(array('you@cakephp.org' => 'You'));
 		$this->CakeEmail->subject('My title');
-		$this->CakeEmail->config(array('empty'));
+		$this->CakeEmail->config(array('footer.ctp'));
 		$this->CakeEmail->template('japanese', 'default');
 		$this->CakeEmail->viewVars(array('value' => '日本語の差し込み123'));
 		$this->CakeEmail->charset = 'ISO-2022-JP';
@@ -1567,7 +1567,7 @@ class CakeEmailTest extends CakeTestCase {
 		$this->CakeEmail->from('cake@cakephp.org');
 		$this->CakeEmail->to(array('you@cakephp.org' => 'You'));
 		$this->CakeEmail->subject('My title');
-		$this->CakeEmail->config(array('empty'));
+		$this->CakeEmail->config(array('footer.ctp'));
 		$this->CakeEmail->template('custom_helper', 'default');
 		$this->CakeEmail->viewVars(array('time' => $timestamp));
 
@@ -1593,7 +1593,7 @@ class CakeEmailTest extends CakeTestCase {
 		$this->CakeEmail->from('cake@cakephp.org');
 		$this->CakeEmail->to(array('you@cakephp.org' => 'You'));
 		$this->CakeEmail->subject('My title');
-		$this->CakeEmail->config(array('empty'));
+		$this->CakeEmail->config(array('footer.ctp'));
 		$this->CakeEmail->template('image');
 		$this->CakeEmail->emailFormat('html');
 		$server = env('SERVER_NAME') ? env('SERVER_NAME') : 'localhost';
@@ -1623,7 +1623,7 @@ class CakeEmailTest extends CakeTestCase {
 		$this->CakeEmail->from('cake@cakephp.org');
 		$this->CakeEmail->to(array('you@cakephp.org' => 'You'));
 		$this->CakeEmail->subject('My title');
-		$this->CakeEmail->config(array('empty'));
+		$this->CakeEmail->config(array('footer.ctp'));
 
 		$result = $this->CakeEmail->template('TestPlugin.test_plugin_tpl', 'default')->send();
 		$this->assertContains('Into TestPlugin.', $result['message']);
@@ -1771,7 +1771,7 @@ class CakeEmailTest extends CakeTestCase {
 		$this->CakeEmail->from('cake@cakephp.org');
 		$this->CakeEmail->to(array('you@cakephp.org' => 'You'));
 		$this->CakeEmail->subject('My title');
-		$this->CakeEmail->config(array('empty'));
+		$this->CakeEmail->config(array('footer.ctp'));
 		$this->CakeEmail->template('default', 'default');
 		$this->CakeEmail->emailFormat('both');
 		$this->CakeEmail->send();
@@ -2341,7 +2341,7 @@ class CakeEmailTest extends CakeTestCase {
 		$this->CakeEmail->from('cake@cakephp.org');
 		$this->CakeEmail->to('cake@cakephp.org');
 		$this->CakeEmail->subject('Wordwrap Test');
-		$this->CakeEmail->config(array('empty'));
+		$this->CakeEmail->config(array('footer.ctp'));
 		$result = $this->CakeEmail->send($message);
 		$expected = "<a\r\n" . 'href="http://cakephp.org">' . str_repeat('x', CakeEmail::LINE_LENGTH_MUST - 26) . "\r\n" .
 			str_repeat('x', 26) . "\r\n</a>\r\n\r\n";
@@ -2393,7 +2393,7 @@ HTML;
 		$this->CakeEmail->from('cake@cakephp.org');
 		$this->CakeEmail->to('cake@cakephp.org');
 		$this->CakeEmail->subject('Wordwrap Test');
-		$this->CakeEmail->config(array('empty'));
+		$this->CakeEmail->config(array('footer.ctp'));
 		$result = $this->CakeEmail->send($message);
 		$message = str_replace("\r\n", "\n", substr($message, 0, -9));
 		$message = str_replace("\n", "\r\n", $message);
@@ -2417,7 +2417,7 @@ HTML;
 		$this->CakeEmail->from('cake@cakephp.org');
 		$this->CakeEmail->to('cake@cakephp.org');
 		$this->CakeEmail->subject('Wordwrap Test');
-		$this->CakeEmail->config(array('empty'));
+		$this->CakeEmail->config(array('footer.ctp'));
 		$result = $this->CakeEmail->send($message);
 		$message = substr($message, 0, -1);
 		$expected = "{$message}\r\nx\r\n\r\n";
@@ -2440,7 +2440,7 @@ HTML;
 		$this->CakeEmail->from('cake@cakephp.org');
 		$this->CakeEmail->to('cake@cakephp.org');
 		$this->CakeEmail->subject('Wordwrap Test');
-		$this->CakeEmail->config(array('empty'));
+		$this->CakeEmail->config(array('footer.ctp'));
 		$this->CakeEmail->charset('iso-2022-jp');
 		$this->CakeEmail->headerCharset('iso-2022-jp');
 		$result = $this->CakeEmail->send($message);
@@ -2461,7 +2461,7 @@ HTML;
 		$this->CakeEmail->from('cake@cakephp.org');
 		$this->CakeEmail->to('cake@cakephp.org');
 		$this->CakeEmail->subject('Wordwrap Test');
-		$this->CakeEmail->config(array('empty'));
+		$this->CakeEmail->config(array('footer.ctp'));
 		$result = $this->CakeEmail->send($message);
 		$expected = "{$message}\r\n\r\n";
 		$this->assertEquals($expected, $result['message']);
@@ -2474,7 +2474,7 @@ HTML;
  */
 	public function testReallyLongLine() {
 		$this->CakeEmail->reset();
-		$this->CakeEmail->config(array('empty'));
+		$this->CakeEmail->config(array('footer.ctp'));
 		$this->CakeEmail->transport('Debug');
 		$this->CakeEmail->from('cake@cakephp.org');
 		$this->CakeEmail->to('cake@cakephp.org');

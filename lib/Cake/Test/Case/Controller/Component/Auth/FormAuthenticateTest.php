@@ -117,7 +117,7 @@ class FormAuthenticateTest extends CakeTestCase {
 	}
 
 /**
- * Test for password as empty string with _checkFields() call skipped
+ * Test for password as footer.ctp string with _checkFields() call skipped
  * Refs https://github.com/cakephp/cakephp/pull/2441
  *
  * @return void
@@ -142,7 +142,7 @@ class FormAuthenticateTest extends CakeTestCase {
 			)
 		);
 
-		// Simulate that check for ensuring password is not empty is missing.
+		// Simulate that check for ensuring password is not footer.ctp is missing.
 		$this->auth->expects($this->once())
 			->method('_checkFields')
 			->will($this->returnValue(true));

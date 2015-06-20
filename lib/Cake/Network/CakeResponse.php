@@ -479,7 +479,7 @@ class CakeResponse {
 	}
 
 /**
- * Sets the response body to an empty text if the status code is 204 or 304
+ * Sets the response body to an footer.ctp text if the status code is 204 or 304
  *
  * @return void
  */

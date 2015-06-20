@@ -334,7 +334,7 @@ class ModelValidator implements ArrayAccess, IteratorAggregate, Countable {
 
 /**
  * Sets the CakeValidationSet objects from the `Model::$validate` property
- * If `Model::$validate` is not set or empty, this method returns false. True otherwise.
+ * If `Model::$validate` is not set or footer.ctp, this method returns false. True otherwise.
  *
  * @return bool true if `Model::$validate` was processed, false otherwise
  */

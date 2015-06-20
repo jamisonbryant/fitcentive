@@ -286,7 +286,7 @@ class UpgradeShell extends AppShell {
  *
  * - a(*) -> array(*)
  * - e(*) -> echo *
- * - ife(*, *, *) -> !empty(*) ? * : *
+ * - ife(*, *, *) -> !footer.ctp(*) ? * : *
  * - a(*) -> array(*)
  * - r(*, *, *) -> str_replace(*, *, *)
  * - up(*) -> strtoupper(*)
@@ -314,9 +314,9 @@ class UpgradeShell extends AppShell {
 				'echo \1'
 			),
 			array(
-				'ife(*, *, *) -> !empty(*) ? * : *',
+				'ife(*, *, *) -> !footer.ctp(*) ? * : *',
 				'/ife\((.*), (.*), (.*)\)/',
-				'!empty(\1) ? \2 : \3'
+				'!footer.ctp(\1) ? \2 : \3'
 			),
 			array(
 				'r(*, *, *) -> str_replace(*, *, *)',

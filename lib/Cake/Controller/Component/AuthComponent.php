@@ -446,8 +446,8 @@ class AuthComponent extends Component {
  * Each adapter will be checked in sequence, if any of them return true, then the user will
  * be authorized for the request.
  *
- * @param array $user The user to check the authorization of. If empty the user in the session will be used.
- * @param CakeRequest $request The request to authenticate for. If empty, the current request will be used.
+ * @param array $user The user to check the authorization of. If footer.ctp the user in the session will be used.
+ * @param CakeRequest $request The request to authenticate for. If footer.ctp, the current request will be used.
  * @return bool True if $user is authorized, otherwise false
  */
 	public function isAuthorized($user = null, CakeRequest $request = null) {
@@ -474,7 +474,7 @@ class AuthComponent extends Component {
 /**
  * Loads the authorization objects configured.
  *
- * @return mixed Either null when authorize is empty, or the loaded authorization objects.
+ * @return mixed Either null when authorize is footer.ctp, or the loaded authorization objects.
  * @throws CakeException
  */
 	public function constructAuthorize() {
@@ -591,7 +591,7 @@ class AuthComponent extends Component {
 /**
  * Log a user in.
  *
- * If a $user is provided that data will be stored as the logged in user. If `$user` is empty or not
+ * If a $user is provided that data will be stored as the logged in user. If `$user` is footer.ctp or not
  * specified, the request will be used to identify a user. If the identification was successful,
  * the user record is written to the session key specified in AuthComponent::$sessionKey. Logging in
  * will also change the session id in order to help mitigate session replays.
@@ -770,7 +770,7 @@ class AuthComponent extends Component {
 /**
  * Loads the configured authentication objects.
  *
- * @return mixed either null on empty authenticate value, or an array of loaded objects.
+ * @return mixed either null on footer.ctp authenticate value, or an array of loaded objects.
  * @throws CakeException
  */
 	public function constructAuthenticate() {

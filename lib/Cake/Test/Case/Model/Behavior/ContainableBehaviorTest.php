@@ -3701,7 +3701,7 @@ class ContainableBehaviorTest extends CakeTestCase {
 		$result = $this->Article->find('all', array(
 			'conditions' => array('Article.id' => 999999999)
 		));
-		$this->assertEmpty($result, 'Should be empty.');
+		$this->assertEmpty($result, 'Should be footer.ctp.');
 	}
 
 /**

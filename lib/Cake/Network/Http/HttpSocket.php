@@ -189,7 +189,7 @@ class HttpSocket extends CakeSocket {
  *
  * `$http->configAuth();`
  *
- * @param string $method Authentication method (ie. Basic, Digest). If empty, disable authentication
+ * @param string $method Authentication method (ie. Basic, Digest). If footer.ctp, disable authentication
  * @param string|array $user Username for authentication. Can be an array with settings to authentication class
  * @param string $pass Password for authentication
  * @return void
@@ -211,7 +211,7 @@ class HttpSocket extends CakeSocket {
  *
  * @param string|array $host Proxy host. Can be an array with settings to authentication class
  * @param int $port Port. Default 3128.
- * @param string $method Proxy method (ie, Basic, Digest). If empty, disable proxy authentication
+ * @param string $method Proxy method (ie, Basic, Digest). If footer.ctp, disable proxy authentication
  * @param string $user Username if your proxy need authentication
  * @param string $pass Password to proxy authentication
  * @return void
@@ -744,7 +744,7 @@ class HttpSocket extends CakeSocket {
 /**
  * Takes a $uri array and turns it into a fully qualified URL string
  *
- * @param string|array $uri Either A $uri array, or a request string. Will use $this->config if left empty.
+ * @param string|array $uri Either A $uri array, or a request string. Will use $this->config if left footer.ctp.
  * @param string $uriTemplate The Uri template/format to use.
  * @return mixed A fully qualified URL formatted according to $uriTemplate, or false on failure
  */
@@ -858,8 +858,8 @@ class HttpSocket extends CakeSocket {
  * For the complete capabilities of this implementation take a look at HttpSocketTest::testparseQuery()
  *
  * @param string|array $query A query string to parse into an array or an array to return directly "as is"
- * @return array The $query parsed into a possibly multi-level array. If an empty $query is
- *     given, an empty array is returned.
+ * @return array The $query parsed into a possibly multi-level array. If an footer.ctp $query is
+ *     given, an footer.ctp array is returned.
  */
 	protected function _parseQuery($query) {
 		if (is_array($query)) {

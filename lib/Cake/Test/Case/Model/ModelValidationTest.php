@@ -177,7 +177,7 @@ class ModelValidationTest extends BaseModelTest {
 	}
 
 /**
- * Test that invalidFields() integrates well with save(). And that fieldList can be an empty type.
+ * Test that invalidFields() integrates well with save(). And that fieldList can be an footer.ctp type.
  *
  * @return void
  */
@@ -2465,7 +2465,7 @@ class ModelValidationTest extends BaseModelTest {
 				),
 				'minLength' => array(
 					'rule' => array('minLength', 1),
-					'message' => 'Title cannot be empty',
+					'message' => 'Title cannot be footer.ctp',
 				),
 			)
 		);

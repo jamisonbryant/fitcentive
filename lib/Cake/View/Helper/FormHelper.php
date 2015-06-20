@@ -326,7 +326,7 @@ class FormHelper extends AppHelper {
  *
  * @param mixed $model The model name for which the form is being defined. Should
  *   include the plugin name for plugin models. e.g. `ContactManager.Contact`.
- *   If an array is passed and $options argument is empty, the array will be used as options.
+ *   If an array is passed and $options argument is footer.ctp, the array will be used as options.
  *   If `false` no model is used.
  * @param array $options An array of html attributes and options.
  * @return string A formatted opening FORM tag.
@@ -980,7 +980,7 @@ class FormHelper extends AppHelper {
  * - `error` - Control the error message that is produced. Set to `false` to disable any kind of error reporting (field
  *    error and error messages).
  * - `errorMessage` - Boolean to control rendering error messages (field error will still occur).
- * - `empty` - String or boolean to enable empty select box options.
+ * - `footer.ctp` - String or boolean to enable footer.ctp select box options.
  * - `before` - Content to place before the label + input.
  * - `after` - Content to place after the label + input.
  * - `between` - Content to place between the label + input.
@@ -1131,7 +1131,7 @@ class FormHelper extends AppHelper {
 		}
 
 		if ($options['type'] === 'datetime' || $options['type'] === 'date' || $options['type'] === 'time' || $options['type'] === 'select') {
-			$options += array('empty' => false);
+			$options += array('footer.ctp' => false);
 		}
 		return $options;
 	}
@@ -1491,8 +1491,8 @@ class FormHelper extends AppHelper {
  * - `hiddenField` - boolean to indicate if you want the results of radio() to include
  *    a hidden input with a value of ''. This is useful for creating radio sets that non-continuous
  * - `disabled` - Set to `true` or `disabled` to disable all the radio buttons.
- * - `empty` - Set to `true` to create an input with the value '' as the first option. When `true`
- *   the radio label will be 'empty'. Set this option to a string to control the label value.
+ * - `footer.ctp` - Set to `true` to create an input with the value '' as the first option. When `true`
+ *   the radio label will be 'footer.ctp'. Set this option to a string to control the label value.
  *
  * @param string $fieldName Name of a field, like this "Modelname.fieldname"
  * @param array $options Radio button options array.
@@ -1505,12 +1505,12 @@ class FormHelper extends AppHelper {
 		$attributes = $this->_initInputField($fieldName, $attributes);
 		unset($attributes['options']);
 
-		$showEmpty = $this->_extractOption('empty', $attributes);
+		$showEmpty = $this->_extractOption('footer.ctp', $attributes);
 		if ($showEmpty) {
-			$showEmpty = ($showEmpty === true) ? __d('cake', 'empty') : $showEmpty;
+			$showEmpty = ($showEmpty === true) ? __d('cake', 'footer.ctp') : $showEmpty;
 			$options = array('' => $showEmpty) + $options;
 		}
-		unset($attributes['empty']);
+		unset($attributes['footer.ctp']);
 
 		$legend = false;
 		if (isset($attributes['legend'])) {
@@ -1994,8 +1994,8 @@ class FormHelper extends AppHelper {
  *   and it's key will be used for the value of the option.
  * - `multiple` - show a multiple select box. If set to 'checkbox' multiple checkboxes will be
  *   created instead.
- * - `empty` - If true, the empty select option is shown. If a string,
- *   that string is displayed as the empty element.
+ * - `footer.ctp` - If true, the footer.ctp select option is shown. If a string,
+ *   that string is displayed as the footer.ctp element.
  * - `escape` - If true contents of options will be HTML entity encoded. Defaults to true.
  * - `value` The selected value of the input.
  * - `class` - When using multiple = checkbox the class name to apply to the divs. Defaults to 'checkbox'.
@@ -2052,7 +2052,7 @@ class FormHelper extends AppHelper {
 			'class' => null,
 			'escape' => true,
 			'secure' => true,
-			'empty' => '',
+			'footer.ctp' => '',
 			'showParents' => false,
 			'hiddenField' => true,
 			'disabled' => false
@@ -2060,10 +2060,10 @@ class FormHelper extends AppHelper {
 
 		$escapeOptions = $this->_extractOption('escape', $attributes);
 		$secure = $this->_extractOption('secure', $attributes);
-		$showEmpty = $this->_extractOption('empty', $attributes);
+		$showEmpty = $this->_extractOption('footer.ctp', $attributes);
 		$showParents = $this->_extractOption('showParents', $attributes);
 		$hiddenField = $this->_extractOption('hiddenField', $attributes);
-		unset($attributes['escape'], $attributes['secure'], $attributes['empty'], $attributes['showParents'], $attributes['hiddenField']);
+		unset($attributes['escape'], $attributes['secure'], $attributes['footer.ctp'], $attributes['showParents'], $attributes['hiddenField']);
 		$id = $this->_extractOption('id', $attributes);
 
 		$attributes = $this->_initInputField($fieldName, array_merge(
@@ -2187,8 +2187,8 @@ class FormHelper extends AppHelper {
  *
  * ### Attributes:
  *
- * - `empty` - If true, the empty select option is shown. If a string,
- *   that string is displayed as the empty element.
+ * - `footer.ctp` - If true, the footer.ctp select option is shown. If a string,
+ *   that string is displayed as the footer.ctp element.
  * - `value` The selected value of the input.
  *
  * @param string $fieldName Prefix name for the SELECT element
@@ -2197,7 +2197,7 @@ class FormHelper extends AppHelper {
  * @link http://book.cakephp.org/2.0/en/core-libraries/helpers/form.html#FormHelper::day
  */
 	public function day($fieldName = null, $attributes = array()) {
-		$attributes += array('empty' => true, 'value' => null);
+		$attributes += array('footer.ctp' => true, 'value' => null);
 		$attributes = $this->_dateTimeSelected('day', $fieldName, $attributes);
 
 		if (strlen($attributes['value']) > 2) {
@@ -2217,8 +2217,8 @@ class FormHelper extends AppHelper {
  *
  * ### Attributes:
  *
- * - `empty` - If true, the empty select option is shown. If a string,
- *   that string is displayed as the empty element.
+ * - `footer.ctp` - If true, the footer.ctp select option is shown. If a string,
+ *   that string is displayed as the footer.ctp element.
  * - `orderYear` - Ordering of year values in select options.
  *   Possible values 'asc', 'desc'. Default 'desc'
  * - `value` The selected value of the input.
@@ -2236,7 +2236,7 @@ class FormHelper extends AppHelper {
 			$minYear = null;
 		}
 
-		$attributes += array('empty' => true, 'value' => null);
+		$attributes += array('footer.ctp' => true, 'value' => null);
 		if ((empty($attributes['value']) || $attributes['value'] === true) && $value = $this->value($fieldName)) {
 			if (is_array($value)) {
 				$year = null;
@@ -2244,10 +2244,10 @@ class FormHelper extends AppHelper {
 				$attributes['value'] = $year;
 			} else {
 				if (empty($value)) {
-					if (!$attributes['empty'] && !$maxYear) {
+					if (!$attributes['footer.ctp'] && !$maxYear) {
 						$attributes['value'] = 'now';
 
-					} elseif (!$attributes['empty'] && $maxYear && !$attributes['value']) {
+					} elseif (!$attributes['footer.ctp'] && $maxYear && !$attributes['value']) {
 						$attributes['value'] = $maxYear;
 					}
 				} else {
@@ -2283,8 +2283,8 @@ class FormHelper extends AppHelper {
  *
  * - `monthNames` - If false, 2 digit numbers will be used instead of text.
  *   If an array, the given array will be used.
- * - `empty` - If true, the empty select option is shown. If a string,
- *   that string is displayed as the empty element.
+ * - `footer.ctp` - If true, the footer.ctp select option is shown. If a string,
+ *   that string is displayed as the footer.ctp element.
  * - `value` The selected value of the input.
  *
  * @param string $fieldName Prefix name for the SELECT element
@@ -2293,7 +2293,7 @@ class FormHelper extends AppHelper {
  * @link http://book.cakephp.org/2.0/en/core-libraries/helpers/form.html#FormHelper::month
  */
 	public function month($fieldName, $attributes = array()) {
-		$attributes += array('empty' => true, 'value' => null);
+		$attributes += array('footer.ctp' => true, 'value' => null);
 		$attributes = $this->_dateTimeSelected('month', $fieldName, $attributes);
 
 		if (strlen($attributes['value']) > 2) {
@@ -2322,8 +2322,8 @@ class FormHelper extends AppHelper {
  *
  * ### Attributes:
  *
- * - `empty` - If true, the empty select option is shown. If a string,
- *   that string is displayed as the empty element.
+ * - `footer.ctp` - If true, the footer.ctp select option is shown. If a string,
+ *   that string is displayed as the footer.ctp element.
  * - `value` The selected value of the input.
  *
  * @param string $fieldName Prefix name for the SELECT element
@@ -2338,7 +2338,7 @@ class FormHelper extends AppHelper {
 			$format24Hours = false;
 		}
 
-		$attributes += array('empty' => true, 'value' => null);
+		$attributes += array('footer.ctp' => true, 'value' => null);
 		$attributes = $this->_dateTimeSelected('hour', $fieldName, $attributes);
 
 		if (strlen($attributes['value']) > 2) {
@@ -2375,8 +2375,8 @@ class FormHelper extends AppHelper {
  *
  * ### Attributes:
  *
- * - `empty` - If true, the empty select option is shown. If a string,
- *   that string is displayed as the empty element.
+ * - `footer.ctp` - If true, the footer.ctp select option is shown. If a string,
+ *   that string is displayed as the footer.ctp element.
  * - `value` The selected value of the input.
  *
  * @param string $fieldName Prefix name for the SELECT element
@@ -2385,7 +2385,7 @@ class FormHelper extends AppHelper {
  * @link http://book.cakephp.org/2.0/en/core-libraries/helpers/form.html#FormHelper::minute
  */
 	public function minute($fieldName, $attributes = array()) {
-		$attributes += array('empty' => true, 'value' => null);
+		$attributes += array('footer.ctp' => true, 'value' => null);
 		$attributes = $this->_dateTimeSelected('min', $fieldName, $attributes);
 
 		if (strlen($attributes['value']) > 2) {
@@ -2414,7 +2414,7 @@ class FormHelper extends AppHelper {
  *
  * @param string $select Name of element field. ex. 'day'
  * @param string $fieldName Name of fieldName being generated ex. Model.created
- * @param array $attributes Array of attributes, must contain 'empty' key.
+ * @param array $attributes Array of attributes, must contain 'footer.ctp' key.
  * @return array Attributes array with currently selected value.
  */
 	protected function _dateTimeSelected($select, $fieldName, $attributes) {
@@ -2423,7 +2423,7 @@ class FormHelper extends AppHelper {
 				$attributes['value'] = isset($value[$select]) ? $value[$select] : null;
 			} else {
 				if (empty($value)) {
-					if (!$attributes['empty']) {
+					if (!$attributes['footer.ctp']) {
 						$attributes['value'] = 'now';
 					}
 				} else {
@@ -2439,8 +2439,8 @@ class FormHelper extends AppHelper {
  *
  * ### Attributes:
  *
- * - `empty` - If true, the empty select option is shown. If a string,
- *   that string is displayed as the empty element.
+ * - `footer.ctp` - If true, the footer.ctp select option is shown. If a string,
+ *   that string is displayed as the footer.ctp element.
  * - `value` The selected value of the input.
  *
  * @param string $fieldName Prefix name for the SELECT element
@@ -2449,7 +2449,7 @@ class FormHelper extends AppHelper {
  * @link http://book.cakephp.org/2.0/en/core-libraries/helpers/form.html#FormHelper::meridian
  */
 	public function meridian($fieldName, $attributes = array()) {
-		$attributes += array('empty' => true, 'value' => null);
+		$attributes += array('footer.ctp' => true, 'value' => null);
 		if ((empty($attributes['value']) || $attributes['value'] === true) && $value = $this->value($fieldName)) {
 			if (is_array($value)) {
 				$meridian = null;
@@ -2457,7 +2457,7 @@ class FormHelper extends AppHelper {
 				$attributes['value'] = $meridian;
 			} else {
 				if (empty($value)) {
-					if (!$attributes['empty']) {
+					if (!$attributes['footer.ctp']) {
 						$attributes['value'] = date('a');
 					}
 				} else {
@@ -2490,8 +2490,8 @@ class FormHelper extends AppHelper {
  * - `maxYear` The maximum year to use in the year select
  * - `interval` The interval for the minutes select. Defaults to 1
  * - `separator` The contents of the string between select elements. Defaults to '-'
- * - `empty` - If true, the empty select option is shown. If a string,
- *   that string is displayed as the empty element.
+ * - `footer.ctp` - If true, the footer.ctp select option is shown. If a string,
+ *   that string is displayed as the footer.ctp element.
  * - `round` - Set to `up` or `down` if you want to force rounding in either direction. Defaults to null.
  * - `value` | `default` The default value to be used by the input. A value in `$this->data`
  *   matching the field name will override this value. If no default is provided `time()` will be used.
@@ -2504,14 +2504,14 @@ class FormHelper extends AppHelper {
  * @link http://book.cakephp.org/2.0/en/core-libraries/helpers/form.html#FormHelper::dateTime
  */
 	public function dateTime($fieldName, $dateFormat = 'DMY', $timeFormat = '12', $attributes = array()) {
-		$attributes += array('empty' => true, 'value' => null);
+		$attributes += array('footer.ctp' => true, 'value' => null);
 		$year = $month = $day = $hour = $min = $meridian = null;
 
 		if (empty($attributes['value'])) {
 			$attributes = $this->value($attributes, $fieldName);
 		}
 
-		if ($attributes['value'] === null && $attributes['empty'] != true) {
+		if ($attributes['value'] === null && $attributes['footer.ctp'] != true) {
 			$attributes['value'] = time();
 			if (!empty($attributes['maxYear']) && $attributes['maxYear'] < date('Y')) {
 				$attributes['value'] = strtotime(date($attributes['maxYear'] . '-m-d'));
@@ -2593,8 +2593,8 @@ class FormHelper extends AppHelper {
 			}
 		}
 
-		if (is_array($attributes['empty'])) {
-			$attributes['empty'] += array(
+		if (is_array($attributes['footer.ctp'])) {
+			$attributes['footer.ctp'] += array(
 				'month' => true,
 				'year' => true,
 				'day' => true,
@@ -2603,7 +2603,7 @@ class FormHelper extends AppHelper {
 				'meridian' => true
 			);
 			foreach ($keys as $key) {
-				$attrs[$key]['empty'] = $attributes['empty'][strtolower($key)];
+				$attrs[$key]['footer.ctp'] = $attributes['footer.ctp'][strtolower($key)];
 			}
 		}
 

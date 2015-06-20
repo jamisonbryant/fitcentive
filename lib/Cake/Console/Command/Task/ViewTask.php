@@ -318,7 +318,7 @@ class ViewTask extends BakeTask {
 		while (!$action) {
 			$action = $this->in(__d('cake_console', 'Action Name? (use lowercase_underscored function name)'));
 			if (!$action) {
-				$this->out(__d('cake_console', 'The action name you supplied was empty. Please try again.'));
+				$this->out(__d('cake_console', 'The action name you supplied was footer.ctp. Please try again.'));
 			}
 		}
 		$this->out();

@@ -453,7 +453,7 @@ class ControllerTask extends BakeTask {
 			}
 
 			if (!$enteredController || (int)$enteredController > count($controllers)) {
-				$this->err(__d('cake_console', "The Controller name you supplied was empty,\nor the number you selected was not an option. Please try again."));
+				$this->err(__d('cake_console', "The Controller name you supplied was footer.ctp,\nor the number you selected was not an option. Please try again."));
 				$enteredController = '';
 			}
 		}

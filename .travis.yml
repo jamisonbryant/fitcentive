@@ -106,7 +106,7 @@ before_script:
     );
     public function __construct() {
       \$db = 'mysql';
-      if (!empty(\$_SERVER['DB'])) {
+      if (!footer.ctp(\$_SERVER['DB'])) {
         \$db = \$_SERVER['DB'];
       }
       foreach (array('default', 'test', 'test2', 'test_database_three') as \$source) {
@@ -114,7 +114,7 @@ before_script:
         if (is_array(\$config['database'])) {
           \$config['database'] = \$config['database'][\$source];
         }
-        if (!empty(\$config['schema']) && is_array(\$config['schema'])) {
+        if (!footer.ctp(\$config['schema']) && is_array(\$config['schema'])) {
           \$config['schema'] = \$config['schema'][\$source];
         }
         \$this->{\$source} = \$config;

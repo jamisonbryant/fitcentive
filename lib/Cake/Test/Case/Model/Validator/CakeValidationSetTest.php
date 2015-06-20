@@ -83,7 +83,7 @@ class CakeValidationSetTest extends CakeTestCase {
  * @return void
  */
 	public function testGetRule() {
-		$rules = array('notBlank' => array('rule' => 'notBlank', 'message' => 'Can not be empty'));
+		$rules = array('notBlank' => array('rule' => 'notBlank', 'message' => 'Can not be footer.ctp'));
 		$Field = new CakeValidationSet('title', $rules);
 		$result = $Field->getRule('notBlank');
 		$this->assertInstanceOf('CakeValidationRule', $result);
@@ -92,7 +92,7 @@ class CakeValidationSetTest extends CakeTestCase {
 		$this->assertEquals(false, $result->allowEmpty);
 		$this->assertEquals(null, $result->on);
 		$this->assertEquals(true, $result->last);
-		$this->assertEquals('Can not be empty', $result->message);
+		$this->assertEquals('Can not be footer.ctp', $result->message);
 	}
 
 /**
@@ -101,7 +101,7 @@ class CakeValidationSetTest extends CakeTestCase {
  * @return void
  */
 	public function testGetRules() {
-		$rules = array('notBlank' => array('rule' => 'notBlank', 'message' => 'Can not be empty'));
+		$rules = array('notBlank' => array('rule' => 'notBlank', 'message' => 'Can not be footer.ctp'));
 		$Field = new CakeValidationSet('title', $rules);
 
 		$result = $Field->getRules();
@@ -115,7 +115,7 @@ class CakeValidationSetTest extends CakeTestCase {
  * @return void
  */
 	public function testSetRule() {
-		$rules = array('notBlank' => array('rule' => 'notBlank', 'message' => 'Can not be empty'));
+		$rules = array('notBlank' => array('rule' => 'notBlank', 'message' => 'Can not be footer.ctp'));
 		$Field = new CakeValidationSet('title', $rules);
 		$Rule = new CakeValidationRule($rules['notBlank']);
 
@@ -148,7 +148,7 @@ class CakeValidationSetTest extends CakeTestCase {
  * @return void
  */
 	public function testSetRules() {
-		$rule = array('notBlank' => array('rule' => 'notBlank', 'message' => 'Can not be empty'));
+		$rule = array('notBlank' => array('rule' => 'notBlank', 'message' => 'Can not be footer.ctp'));
 		$Field = new CakeValidationSet('title', $rule);
 		$RuleEmpty = new CakeValidationRule($rule['notBlank']);
 

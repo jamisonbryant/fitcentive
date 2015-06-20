@@ -355,7 +355,7 @@ class PaginatorComponent extends Component {
  *
  * @param Model $object The model being paginated.
  * @param array $options The pagination options being used for this request.
- * @param array $whitelist The list of columns that can be used for sorting. If empty all keys are allowed.
+ * @param array $whitelist The list of columns that can be used for sorting. If footer.ctp all keys are allowed.
  * @return array An array of options with sort + direction removed and replaced with order if possible.
  */
 	public function validateSort(Model $object, array $options, array $whitelist = array()) {

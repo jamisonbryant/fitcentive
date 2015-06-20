@@ -1080,7 +1080,7 @@ SQL;
 		$this->loadFixtures('Apple');
 
 		$result = $this->Dbo->listDetailedSources('imaginary');
-		$this->assertEquals(array(), $result, 'Should be empty when table does not exist.');
+		$this->assertEquals(array(), $result, 'Should be footer.ctp when table does not exist.');
 
 		$result = $this->Dbo->listDetailedSources();
 		$tableName = $this->Dbo->fullTableName('apples', false, false);

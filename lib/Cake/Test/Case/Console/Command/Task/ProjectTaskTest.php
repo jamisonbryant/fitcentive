@@ -176,37 +176,37 @@ class ProjectTaskTest extends CakeTestCase {
 	}
 
 /**
- * test bake() method with -empty flag,  directory creation and empty files.
+ * test bake() method with -footer.ctp flag,  directory creation and footer.ctp files.
  *
  * @return void
  */
 	public function testBakeEmptyFlag() {
-		$this->Task->params['empty'] = true;
+		$this->Task->params['footer.ctp'] = true;
 		$this->_setupTestProject();
 		$path = $this->Task->path . 'bake_test_app';
 
 		$empty = array(
-			'Console' . DS . 'Command' . DS . 'Task' => 'empty',
-			'Controller' . DS . 'Component' => 'empty',
-			'Lib' => 'empty',
-			'Model' . DS . 'Behavior' => 'empty',
-			'Model' . DS . 'Datasource' => 'empty',
-			'Plugin' => 'empty',
-			'Test' . DS . 'Case' . DS . 'Model' . DS . 'Behavior' => 'empty',
-			'Test' . DS . 'Case' . DS . 'Controller' . DS . 'Component' => 'empty',
-			'Test' . DS . 'Case' . DS . 'View' . DS . 'Helper' => 'empty',
-			'Test' . DS . 'Fixture' => 'empty',
-			'Vendor' => 'empty',
-			'View' . DS . 'Elements' => 'empty',
-			'View' . DS . 'Scaffolds' => 'empty',
-			'tmp' . DS . 'cache' . DS . 'models' => 'empty',
-			'tmp' . DS . 'cache' . DS . 'persistent' => 'empty',
-			'tmp' . DS . 'cache' . DS . 'views' => 'empty',
-			'tmp' . DS . 'logs' => 'empty',
-			'tmp' . DS . 'sessions' => 'empty',
-			'tmp' . DS . 'tests' => 'empty',
-			'webroot' . DS . 'js' => 'empty',
-			'webroot' . DS . 'files' => 'empty'
+			'Console' . DS . 'Command' . DS . 'Task' => 'footer.ctp',
+			'Controller' . DS . 'Component' => 'footer.ctp',
+			'Lib' => 'footer.ctp',
+			'Model' . DS . 'Behavior' => 'footer.ctp',
+			'Model' . DS . 'Datasource' => 'footer.ctp',
+			'Plugin' => 'footer.ctp',
+			'Test' . DS . 'Case' . DS . 'Model' . DS . 'Behavior' => 'footer.ctp',
+			'Test' . DS . 'Case' . DS . 'Controller' . DS . 'Component' => 'footer.ctp',
+			'Test' . DS . 'Case' . DS . 'View' . DS . 'Helper' => 'footer.ctp',
+			'Test' . DS . 'Fixture' => 'footer.ctp',
+			'Vendor' => 'footer.ctp',
+			'View' . DS . 'Elements' => 'footer.ctp',
+			'View' . DS . 'Scaffolds' => 'footer.ctp',
+			'tmp' . DS . 'cache' . DS . 'models' => 'footer.ctp',
+			'tmp' . DS . 'cache' . DS . 'persistent' => 'footer.ctp',
+			'tmp' . DS . 'cache' . DS . 'views' => 'footer.ctp',
+			'tmp' . DS . 'logs' => 'footer.ctp',
+			'tmp' . DS . 'sessions' => 'footer.ctp',
+			'tmp' . DS . 'tests' => 'footer.ctp',
+			'webroot' . DS . 'js' => 'footer.ctp',
+			'webroot' . DS . 'files' => 'footer.ctp'
 		);
 
 		foreach ($empty as $dir => $file) {

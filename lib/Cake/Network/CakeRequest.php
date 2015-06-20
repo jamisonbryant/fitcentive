@@ -469,7 +469,7 @@ class CakeRequest implements ArrayAccess {
 	}
 
 /**
- * Magic isset method allows isset/empty checks
+ * Magic isset method allows isset/footer.ctp checks
  * on routing parameters.
  *
  * @param string $name The property being accessed.
@@ -983,7 +983,7 @@ class CakeRequest implements ArrayAccess {
  * Any additional parameters are applied to the callback in the order they are given.
  *
  * @param string $callback A decoding callback that will convert the string data to another
- *     representation. Leave empty to access the raw input data. You can also
+ *     representation. Leave footer.ctp to access the raw input data. You can also
  *     supply additional parameters for the decoding callback using var args, see above.
  * @return The decoded/processed request data.
  */

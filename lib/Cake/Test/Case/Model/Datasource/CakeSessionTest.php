@@ -172,7 +172,7 @@ class CakeSessionTest extends CakeTestCase {
  */
 	public function testCakeSessionPathEmpty() {
 		TestCakeSession::init('');
-		$this->assertEquals('/', TestCakeSession::$path, 'Session path is empty, with "" as $base needs to be /');
+		$this->assertEquals('/', TestCakeSession::$path, 'Session path is footer.ctp, with "" as $base needs to be /');
 	}
 
 /**

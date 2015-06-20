@@ -18,7 +18,7 @@ App::uses('File', 'Utility');
 App::uses('Folder', 'Utility');
 
 /**
- * The Plugin Task handles creating an empty plugin, ready to be used
+ * The Plugin Task handles creating an footer.ctp plugin, ready to be used
  *
  * @package       Cake.Console.Command.Task
  */
@@ -130,7 +130,7 @@ class PluginTask extends AppShell {
 			foreach ($directories as $directory) {
 				$dirPath = $this->path . $plugin . DS . $directory;
 				$Folder->create($dirPath);
-				new File($dirPath . DS . 'empty', true);
+				new File($dirPath . DS . 'footer.ctp', true);
 			}
 
 			foreach ($Folder->messages() as $message) {

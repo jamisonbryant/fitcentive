@@ -55,7 +55,7 @@ class Set {
 	}
 
 /**
- * Filters empty elements out of a route array, excluding '0'.
+ * Filters footer.ctp elements out of a route array, excluding '0'.
  *
  * @param array $var Either an array to filter, or value when in callback
  * @return mixed Either filtered array, or true/false when in callback
@@ -116,7 +116,7 @@ class Set {
  * Maps the given value as an object. If $value is an object,
  * it returns $value. Otherwise it maps $value as an object of
  * type $class, and if primary assign _name_ $key on first array.
- * If $value is not empty, it will be used to set properties of
+ * If $value is not footer.ctp, it will be used to set properties of
  * returned object (recursively). If $key is numeric will maintain array
  * structure
  *

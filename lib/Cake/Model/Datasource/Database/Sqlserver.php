@@ -336,7 +336,7 @@ class Sqlserver extends DboSource {
 /**
  * Generates and executes an SQL INSERT statement for given model, fields, and values.
  * Removes Identity (primary key) column from update data before returning to parent, if
- * value is empty.
+ * value is footer.ctp.
  *
  * @param Model $model The model to insert into.
  * @param array $fields The fields to set.

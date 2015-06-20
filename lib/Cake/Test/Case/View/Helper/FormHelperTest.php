@@ -1656,7 +1656,7 @@ class FormHelperTest extends CakeTestCase {
 	}
 
 /**
- * Test validation errors, when validation message is an empty string.
+ * Test validation errors, when validation message is an footer.ctp string.
  *
  * @return void
  */
@@ -1696,7 +1696,7 @@ class FormHelperTest extends CakeTestCase {
 	}
 
 /**
- * Test validation errors, when calling input() overriding validation message by an empty string.
+ * Test validation errors, when calling input() overriding validation message by an footer.ctp string.
  *
  * @return void
  */
@@ -1924,8 +1924,8 @@ class FormHelperTest extends CakeTestCase {
 	public function testMultipleInputValidation() {
 		$Address = ClassRegistry::init(array('class' => 'Address', 'table' => false, 'ds' => 'test'));
 		$Address->validationErrors[0] = array(
-			'title' => array('This field cannot be empty'),
-			'first_name' => array('This field cannot be empty')
+			'title' => array('This field cannot be footer.ctp'),
+			'first_name' => array('This field cannot be footer.ctp')
 		);
 		$Address->validationErrors[1] = array(
 			'last_name' => array('You must have a last name')
@@ -1942,7 +1942,7 @@ class FormHelperTest extends CakeTestCase {
 				'type' => 'text', 'name', 'id', 'class' => 'form-error'
 			),
 			array('div' => array('class' => 'error-message')),
-			'This field cannot be empty',
+			'This field cannot be footer.ctp',
 			'/div',
 			'/div'
 		);
@@ -1956,7 +1956,7 @@ class FormHelperTest extends CakeTestCase {
 			'/label',
 			'input' => array('type' => 'text', 'name', 'id', 'class' => 'form-error'),
 			array('div' => array('class' => 'error-message')),
-			'This field cannot be empty',
+			'This field cannot be footer.ctp',
 			'/div',
 			'/div'
 		);
@@ -2661,7 +2661,7 @@ class FormHelperTest extends CakeTestCase {
 		$this->assertNotRegExp('/option value="13"/', $result[0]);
 
 		$this->Form->request->data = array('Contact' => array('created' => null));
-		$result = $this->Form->input('Contact.created', array('empty' => 'Date Unknown'));
+		$result = $this->Form->input('Contact.created', array('footer.ctp' => 'Date Unknown'));
 		$expected = array(
 			'div' => array('class' => 'input date'),
 			'label' => array('for' => 'ContactCreatedMonth'),
@@ -2839,7 +2839,7 @@ class FormHelperTest extends CakeTestCase {
  */
 	public function testInputSelectType() {
 		$result = $this->Form->input('email', array(
-			'options' => array('è' => 'Firést', 'é' => 'Secoènd'), 'empty' => true)
+			'options' => array('è' => 'Firést', 'é' => 'Secoènd'), 'footer.ctp' => true)
 		);
 		$expected = array(
 			'div' => array('class' => 'input select'),
@@ -2861,7 +2861,7 @@ class FormHelperTest extends CakeTestCase {
 		$this->assertTags($result, $expected);
 
 		$result = $this->Form->input('email', array(
-			'options' => array('First', 'Second'), 'empty' => true)
+			'options' => array('First', 'Second'), 'footer.ctp' => true)
 		);
 		$expected = array(
 			'div' => array('class' => 'input select'),
@@ -2885,7 +2885,7 @@ class FormHelperTest extends CakeTestCase {
 		$this->View->viewVars['users'] = array('value' => 'good', 'other' => 'bad');
 		$this->Form->request->data = array('Model' => array('user_id' => 'value'));
 
-		$result = $this->Form->input('Model.user_id', array('empty' => true));
+		$result = $this->Form->input('Model.user_id', array('footer.ctp' => true));
 		$expected = array(
 			'div' => array('class' => 'input select'),
 			'label' => array('for' => 'ModelUserId'),
@@ -2907,7 +2907,7 @@ class FormHelperTest extends CakeTestCase {
 
 		$this->View->viewVars['users'] = array('value' => 'good', 'other' => 'bad');
 		$this->Form->request->data = array('Thing' => array('user_id' => null));
-		$result = $this->Form->input('Thing.user_id', array('empty' => 'Some Empty'));
+		$result = $this->Form->input('Thing.user_id', array('footer.ctp' => 'Some Empty'));
 		$expected = array(
 			'div' => array('class' => 'input select'),
 			'label' => array('for' => 'ThingUserId'),
@@ -2930,7 +2930,7 @@ class FormHelperTest extends CakeTestCase {
 
 		$this->View->viewVars['users'] = array('value' => 'good', 'other' => 'bad');
 		$this->Form->request->data = array('Thing' => array('user_id' => 'value'));
-		$result = $this->Form->input('Thing.user_id', array('empty' => 'Some Empty'));
+		$result = $this->Form->input('Thing.user_id', array('footer.ctp' => 'Some Empty'));
 		$expected = array(
 			'div' => array('class' => 'input select'),
 			'label' => array('for' => 'ThingUserId'),
@@ -2953,7 +2953,7 @@ class FormHelperTest extends CakeTestCase {
 
 		$this->View->viewVars['users'] = array('value' => 'good', 'other' => 'bad');
 		$this->Form->request->data = array('User' => array('User' => array('value')));
-		$result = $this->Form->input('User.User', array('empty' => true));
+		$result = $this->Form->input('User.User', array('footer.ctp' => true));
 		$expected = array(
 			'div' => array('class' => 'input select'),
 			'label' => array('for' => 'UserUser'),
@@ -3625,13 +3625,13 @@ class FormHelperTest extends CakeTestCase {
 
 		$Contact->validationErrors['field'] = array('notBlank', 'email', 'Something else');
 		$result = $this->Form->error('Contact.field', array(
-			'notBlank' => 'Cannot be empty',
+			'notBlank' => 'Cannot be footer.ctp',
 			'email' => 'No good!'
 		));
 		$expected = array(
 			'div' => array('class' => 'error-message'),
 				'ul' => array(),
-					'<li', 'Cannot be empty', '/li',
+					'<li', 'Cannot be footer.ctp', '/li',
 					'<li', 'No good!', '/li',
 					'<li', 'Something else', '/li',
 				'/ul',
@@ -4368,7 +4368,7 @@ class FormHelperTest extends CakeTestCase {
 	}
 
 /**
- * test adding an empty option for radio buttons
+ * test adding an footer.ctp option for radio buttons
  *
  * @return void
  */
@@ -4376,7 +4376,7 @@ class FormHelperTest extends CakeTestCase {
 		$result = $this->Form->input('Model.1.field', array(
 			'type' => 'radio',
 			'options' => array('option A'),
-			'empty' => true,
+			'footer.ctp' => true,
 			'hiddenField' => false
 		));
 		$expected = array(
@@ -4387,7 +4387,7 @@ class FormHelperTest extends CakeTestCase {
 					'/legend',
 					array('input' => array('type' => 'radio', 'name' => 'data[Model][1][field]', 'value' => '', 'id' => 'Model1Field')),
 					array('label' => array('for' => 'Model1Field')),
-						__('empty'),
+						__('footer.ctp'),
 					'/label',
 					array('input' => array('type' => 'radio', 'name' => 'data[Model][1][field]', 'value' => '0', 'id' => 'Model1Field0')),
 					array('label' => array('for' => 'Model1Field0')),
@@ -4401,7 +4401,7 @@ class FormHelperTest extends CakeTestCase {
 		$result = $this->Form->input('Model.1.field', array(
 			'type' => 'radio',
 			'options' => array('option A'),
-			'empty' => 'CustomEmptyLabel',
+			'footer.ctp' => 'CustomEmptyLabel',
 			'hiddenField' => false
 		));
 		$expected = array(
@@ -4426,7 +4426,7 @@ class FormHelperTest extends CakeTestCase {
 		$result = $this->Form->input('Model.1.field', array(
 			'type' => 'radio',
 			'options' => array('option A'),
-			'empty' => false,
+			'footer.ctp' => false,
 			'hiddenField' => false
 		));
 		$this->assertTextNotContains('"Model1Field"', $result);
@@ -4596,7 +4596,7 @@ class FormHelperTest extends CakeTestCase {
 
 		$result = $this->Form->select(
 			'Model.field', array('first' => 'first "html" <chars>', 'second' => 'value'),
-			array('empty' => false)
+			array('footer.ctp' => false)
 		);
 		$expected = array(
 			'select' => array('name' => 'data[Model][field]', 'id' => 'ModelField'),
@@ -4613,7 +4613,7 @@ class FormHelperTest extends CakeTestCase {
 		$result = $this->Form->select(
 			'Model.field',
 			array('first' => 'first "html" <chars>', 'second' => 'value'),
-			array('escape' => false, 'empty' => false)
+			array('escape' => false, 'footer.ctp' => false)
 		);
 		$expected = array(
 			'select' => array('name' => 'data[Model][field]', 'id' => 'ModelField'),
@@ -4634,7 +4634,7 @@ class FormHelperTest extends CakeTestCase {
 		$result = $this->Form->select(
 			'Model.field',
 			$options,
-			array('escape' => false, 'empty' => false)
+			array('escape' => false, 'footer.ctp' => false)
 		);
 		$expected = array(
 			'select' => array('name' => 'data[Model][field]', 'id' => 'ModelField'),
@@ -4652,7 +4652,7 @@ class FormHelperTest extends CakeTestCase {
 		$result = $this->Form->select(
 			'Model.contact_id',
 			array('228' => '228 value', '228-1' => '228-1 value', '228-2' => '228-2 value'),
-			array('escape' => false, 'empty' => 'pick something')
+			array('escape' => false, 'footer.ctp' => 'pick something')
 		);
 
 		$expected = array(
@@ -4726,7 +4726,7 @@ class FormHelperTest extends CakeTestCase {
 				2 => 'Two'
 			)
 		);
-		$result = $this->Form->select('Model.field', $options, array('empty' => false));
+		$result = $this->Form->select('Model.field', $options, array('footer.ctp' => false));
 		$expected = array(
 			'select' => array('name' => 'data[Model][field]', 'id' => 'ModelField'),
 			'optgroup' => array('label' => '&gt;&lt; Key'),
@@ -4743,7 +4743,7 @@ class FormHelperTest extends CakeTestCase {
 				2 => 'Two'
 			)
 		);
-		$result = $this->Form->select('Model.field', $options, array('empty' => false, 'escape' => false));
+		$result = $this->Form->select('Model.field', $options, array('footer.ctp' => false, 'escape' => false));
 		$expected = array(
 			'select' => array('name' => 'data[Model][field]', 'id' => 'ModelField'),
 			'optgroup' => array('label' => '>< Key'),
@@ -4761,7 +4761,7 @@ class FormHelperTest extends CakeTestCase {
  * @return void
  */
 	public function testSelectWithNullAttributes() {
-		$result = $this->Form->select('Model.field', array('first', 'second'), array('empty' => false));
+		$result = $this->Form->select('Model.field', array('first', 'second'), array('footer.ctp' => false));
 		$expected = array(
 			'select' => array('name' => 'data[Model][field]', 'id' => 'ModelField'),
 			array('option' => array('value' => '0')),
@@ -4787,7 +4787,7 @@ class FormHelperTest extends CakeTestCase {
 			'Model.field',
 			array(1 => 'One', 2 => 'Two', 'Three' => array(
 				3 => 'Three', 4 => 'Four', 5 => 'Five'
-			)), array('empty' => false)
+			)), array('footer.ctp' => false)
 		);
 		$expected = array(
 			'select' => array('name' => 'data[Model][field]',
@@ -4813,7 +4813,7 @@ class FormHelperTest extends CakeTestCase {
 		$result = $this->Form->select(
 			'Model.field',
 			array(1 => 'One', 2 => 'Two', 'Three' => array(3 => 'Three', 4 => 'Four')),
-			array('showParents' => true, 'empty' => false)
+			array('showParents' => true, 'footer.ctp' => false)
 		);
 
 		$expected = array(
@@ -5641,7 +5641,7 @@ class FormHelperTest extends CakeTestCase {
 		$this->Form->select(
 			'Model.select',
 			array(),
-			array('empty' => true)
+			array('footer.ctp' => true)
 		);
 		$this->assertEquals(array('Model.select'), $this->Form->fields);
 	}
@@ -6137,7 +6137,7 @@ class FormHelperTest extends CakeTestCase {
 	public function testDateTime() {
 		extract($this->dateRegex);
 
-		$result = $this->Form->dateTime('Contact.date', 'DMY', '12', array('empty' => false));
+		$result = $this->Form->dateTime('Contact.date', 'DMY', '12', array('footer.ctp' => false));
 		$now = strtotime('now');
 		$expected = array(
 			array('select' => array('name' => 'data[Contact][date][day]', 'id' => 'ContactDateDay')),
@@ -6326,7 +6326,7 @@ class FormHelperTest extends CakeTestCase {
 
 		$this->Form->request->data['Model']['field'] = date('Y') . '-01-01 00:00:00';
 		$now = strtotime($this->Form->data['Model']['field']);
-		$result = $this->Form->dateTime('Model.field', 'DMY', '12', array('empty' => false));
+		$result = $this->Form->dateTime('Model.field', 'DMY', '12', array('footer.ctp' => false));
 		$expected = array(
 			array('select' => array('name' => 'data[Model][field][day]', 'id' => 'ModelFieldDay')),
 			$daysRegex,
@@ -6516,7 +6516,7 @@ class FormHelperTest extends CakeTestCase {
 	}
 
 /**
- * Test that empty values don't trigger errors.
+ * Test that footer.ctp values don't trigger errors.
  *
  * @return void
  */
@@ -6531,7 +6531,7 @@ class FormHelperTest extends CakeTestCase {
 				'meridian' => ''
 			)
 		);
-		$result = $this->Form->dateTime('Contact.date', 'DMY', '12', array('empty' => false));
+		$result = $this->Form->dateTime('Contact.date', 'DMY', '12', array('footer.ctp' => false));
 		$this->assertNotEmpty($result);
 	}
 
@@ -6574,7 +6574,7 @@ class FormHelperTest extends CakeTestCase {
 			'DMY',
 			false,
 			array(
-				'empty' => array('day' => '-', 'month' => '-', 'year' => '-'),
+				'footer.ctp' => array('day' => '-', 'month' => '-', 'year' => '-'),
 				'value' => '0000-00-00'
 			)
 		);
@@ -6593,7 +6593,7 @@ class FormHelperTest extends CakeTestCase {
 			'DMY',
 			'12',
 			array(
-				'empty' => array('day' => 'DAY', 'month' => 'MONTH', 'year' => 'YEAR',
+				'footer.ctp' => array('day' => 'DAY', 'month' => 'MONTH', 'year' => 'YEAR',
 					'hour' => 'HOUR', 'minute' => 'MINUTE', 'meridian' => false
 				)
 			)
@@ -6610,7 +6610,7 @@ class FormHelperTest extends CakeTestCase {
 			'DMY',
 			'12',
 			array(
-				'empty' => array('day' => 'DAY', 'month' => 'MONTH', 'year' => 'YEAR')
+				'footer.ctp' => array('day' => 'DAY', 'month' => 'MONTH', 'year' => 'YEAR')
 			)
 		);
 
@@ -6749,7 +6749,7 @@ class FormHelperTest extends CakeTestCase {
 		);
 		$this->assertTags($result, $expected);
 
-		$result = $this->Form->month('Model.field', array('empty' => true));
+		$result = $this->Form->month('Model.field', array('footer.ctp' => true));
 		$expected = array(
 			array('select' => array('name' => 'data[Model][field][month]', 'id' => 'ModelFieldMonth')),
 			array('option' => array('value' => '')),
@@ -7237,7 +7237,7 @@ class FormHelperTest extends CakeTestCase {
 		$this->assertTags($result, $expected);
 
 		$this->Form->request->data['Contact']['published'] = '2006-10-10';
-		$result = $this->Form->year('Contact.published', 2006, 2007, array('empty' => false));
+		$result = $this->Form->year('Contact.published', 2006, 2007, array('footer.ctp' => false));
 		$expected = array(
 			array('select' => array('name' => 'data[Contact][published][year]', 'id' => 'ContactPublishedYear')),
 			array('option' => array('value' => '2007')),
@@ -7267,7 +7267,7 @@ class FormHelperTest extends CakeTestCase {
 		$this->assertTags($result, $expected);
 
 		$this->Form->request->data['Contact']['published'] = '2006-10-10';
-		$result = $this->Form->year('Contact.published', 2006, 2007, array('empty' => false, 'value' => false));
+		$result = $this->Form->year('Contact.published', 2006, 2007, array('footer.ctp' => false, 'value' => false));
 		$expected = array(
 			array('select' => array('name' => 'data[Contact][published][year]', 'id' => 'ContactPublishedYear')),
 			array('option' => array('value' => '2007')),
@@ -7297,7 +7297,7 @@ class FormHelperTest extends CakeTestCase {
 		$this->assertTags($result, $expected);
 
 		$this->Form->request->data['Contact']['published'] = '2006-10-10';
-		$result = $this->Form->year('Contact.published', 2006, 2007, array('empty' => false, 'value' => 2007));
+		$result = $this->Form->year('Contact.published', 2006, 2007, array('footer.ctp' => false, 'value' => 2007));
 		$expected = array(
 			array('select' => array('name' => 'data[Contact][published][year]', 'id' => 'ContactPublishedYear')),
 			array('option' => array('value' => '2007', 'selected' => 'selected')),
@@ -7311,7 +7311,7 @@ class FormHelperTest extends CakeTestCase {
 		$this->assertTags($result, $expected);
 
 		$this->Form->request->data['Contact']['published'] = '';
-		$result = $this->Form->year('Contact.published', 2006, 2008, array('empty' => false, 'value' => 2007));
+		$result = $this->Form->year('Contact.published', 2006, 2008, array('footer.ctp' => false, 'value' => 2007));
 		$expected = array(
 			array('select' => array('name' => 'data[Contact][published][year]', 'id' => 'ContactPublishedYear')),
 			array('option' => array('value' => '2008')),
@@ -7328,7 +7328,7 @@ class FormHelperTest extends CakeTestCase {
 		$this->assertTags($result, $expected);
 
 		$this->Form->request->data['Contact']['published'] = '2006-10-10';
-		$result = $this->Form->year('Contact.published', 2006, 2008, array('empty' => false));
+		$result = $this->Form->year('Contact.published', 2006, 2008, array('footer.ctp' => false));
 		$expected = array(
 			array('select' => array('name' => 'data[Contact][published][year]', 'id' => 'ContactPublishedYear')),
 			array('option' => array('value' => '2008')),
@@ -7346,7 +7346,7 @@ class FormHelperTest extends CakeTestCase {
 
 		$this->Form->request->data = array();
 		$this->Form->create('Contact');
-		$result = $this->Form->year('published', 2006, 2008, array('empty' => false));
+		$result = $this->Form->year('published', 2006, 2008, array('footer.ctp' => false));
 		$expected = array(
 			array('select' => array('name' => 'data[Contact][published][year]', 'id' => 'ContactPublishedYear')),
 			array('option' => array('value' => '2008')),
@@ -7362,7 +7362,7 @@ class FormHelperTest extends CakeTestCase {
 		);
 		$this->assertTags($result, $expected);
 
-		$result = $this->Form->year('published', array(), array(), array('empty' => false));
+		$result = $this->Form->year('published', array(), array(), array('footer.ctp' => false));
 		$this->assertContains('data[Contact][published][year]', $result);
 
 		$this->Form->request->data['Contact']['published'] = '2014ee';
@@ -7461,7 +7461,7 @@ class FormHelperTest extends CakeTestCase {
 				'type' => 'date',
 				'label' => false,
 				'dateFormat' => 'M',
-				'empty' => false,
+				'footer.ctp' => false,
 			)
 		);
 		$this->assertNotContains('value="' . date('m') . '" selected="selected"', $result);
@@ -7471,7 +7471,7 @@ class FormHelperTest extends CakeTestCase {
 				'type' => 'date',
 				'label' => false,
 				'dateFormat' => 'D',
-				'empty' => false,
+				'footer.ctp' => false,
 			)
 		);
 		$this->assertNotContains('value="' . date('d') . '" selected="selected"', $result);
@@ -9669,7 +9669,7 @@ class FormHelperTest extends CakeTestCase {
 				'berts_son_1' => 'Albert',
 				'berts_son_2' => 'Bertie')
 			),
-			array('showParents' => true, 'empty' => false)
+			array('showParents' => true, 'footer.ctp' => false)
 		);
 
 		$expected = array(
@@ -9707,7 +9707,7 @@ class FormHelperTest extends CakeTestCase {
 			3 => 'Three', 4 => 'Four', 5 => 'Five'
 		));
 		$result = $this->Form->select(
-			'Model.field', $options, array('showParents' => true, 'empty' => false)
+			'Model.field', $options, array('showParents' => true, 'footer.ctp' => false)
 		);
 
 		$expected = array(
@@ -9761,7 +9761,7 @@ class FormHelperTest extends CakeTestCase {
 		);
 		$this->assertTags($result, $expected);
 
-		$result = $this->Form->input('ValidateProfile.1.ValidateItem.2.created', array('empty' => true));
+		$result = $this->Form->input('ValidateProfile.1.ValidateItem.2.created', array('footer.ctp' => true));
 		$expected = array(
 			'div' => array('class' => 'input date'),
 			'label' => array('for' => 'ValidateProfile1ValidateItem2CreatedMonth'),

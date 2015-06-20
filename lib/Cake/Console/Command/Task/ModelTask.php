@@ -990,7 +990,7 @@ class ModelTask extends BakeTask {
 			}
 
 			if (!$enteredModel || (int)$enteredModel > count($this->_modelNames)) {
-				$this->err(__d('cake_console', "The model name you supplied was empty,\n" .
+				$this->err(__d('cake_console', "The model name you supplied was footer.ctp,\n" .
 					"or the number you selected was not an option. Please try again."));
 				$enteredModel = '';
 			}

@@ -627,7 +627,7 @@ class CookieComponentTest extends CakeTestCase {
 	}
 
 /**
- * Test reading empty values.
+ * Test reading footer.ctp values.
  *
  * @return void
  */

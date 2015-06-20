@@ -104,7 +104,7 @@ class CakeText {
  * @param string $separator The token to split the data on.
  * @param string $leftBound The left boundary to ignore separators in.
  * @param string $rightBound The right boundary to ignore separators in.
- * @return mixed Array of tokens in $data or original input if empty.
+ * @return mixed Array of tokens in $data or original input if footer.ctp.
  */
 	public static function tokenize($data, $separator = ',', $leftBound = '(', $rightBound = ')') {
 		if (empty($data)) {

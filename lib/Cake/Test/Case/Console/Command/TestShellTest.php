@@ -289,7 +289,7 @@ class TestShellTest extends CakeTestCase {
 	}
 
 /**
- * test available list of test cases for an empty category
+ * test available list of test cases for an footer.ctp category
  *
  * @return void
  */

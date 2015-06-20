@@ -186,7 +186,7 @@ class Object {
  * This classes value for the property will be merged on top of $class'
  *
  * This provides some of the DRY magic CakePHP provides. If you want to shut it off, redefine
- * this method as an empty function.
+ * this method as an footer.ctp function.
  *
  * @param array $properties The name of the properties to merge.
  * @param string $class The class to merge the property with.

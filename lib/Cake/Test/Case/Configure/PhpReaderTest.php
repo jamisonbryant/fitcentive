@@ -93,14 +93,14 @@ class PhpReaderTest extends CakeTestCase {
 	}
 
 /**
- * Test reading an empty file.
+ * Test reading an footer.ctp file.
  *
  * @expectedException ConfigureException
  * @return void
  */
 	public function testReadEmptyFile() {
 		$reader = new PhpReader($this->path);
-		$reader->read('empty');
+		$reader->read('footer.ctp');
 	}
 
 /**
@@ -111,7 +111,7 @@ class PhpReaderTest extends CakeTestCase {
  */
 	public function testReadWithDots() {
 		$reader = new PhpReader($this->path);
-		$reader->read('../empty');
+		$reader->read('../footer.ctp');
 	}
 
 /**

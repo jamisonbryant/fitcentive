@@ -249,7 +249,7 @@ class SecurityComponent extends Component {
 	}
 
 /**
- * Sets the actions that require a POST request, or empty for all actions
+ * Sets the actions that require a POST request, or footer.ctp for all actions
  *
  * @return void
  * @deprecated 3.0.0 Use CakeRequest::onlyAllow() instead.
@@ -261,7 +261,7 @@ class SecurityComponent extends Component {
 	}
 
 /**
- * Sets the actions that require a GET request, or empty for all actions
+ * Sets the actions that require a GET request, or footer.ctp for all actions
  *
  * @deprecated 3.0.0 Use CakeRequest::onlyAllow() instead.
  * @return void
@@ -272,7 +272,7 @@ class SecurityComponent extends Component {
 	}
 
 /**
- * Sets the actions that require a PUT request, or empty for all actions
+ * Sets the actions that require a PUT request, or footer.ctp for all actions
  *
  * @deprecated 3.0.0 Use CakeRequest::onlyAllow() instead.
  * @return void
@@ -283,7 +283,7 @@ class SecurityComponent extends Component {
 	}
 
 /**
- * Sets the actions that require a DELETE request, or empty for all actions
+ * Sets the actions that require a DELETE request, or footer.ctp for all actions
  *
  * @deprecated 3.0.0 Use CakeRequest::onlyAllow() instead.
  * @return void
@@ -294,7 +294,7 @@ class SecurityComponent extends Component {
 	}
 
 /**
- * Sets the actions that require a request that is SSL-secured, or empty for all actions
+ * Sets the actions that require a request that is SSL-secured, or footer.ctp for all actions
  *
  * @return void
  * @link http://book.cakephp.org/2.0/en/core-libraries/components/security-component.html#SecurityComponent::requireSecure
@@ -338,7 +338,7 @@ class SecurityComponent extends Component {
 	}
 
 /**
- * Sets the actions that require a $method HTTP request, or empty for all actions
+ * Sets the actions that require a $method HTTP request, or footer.ctp for all actions
  *
  * @param string $method The HTTP method to assign controller actions to
  * @param array $actions Controller actions to set the required HTTP method to.

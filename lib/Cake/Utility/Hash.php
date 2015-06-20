@@ -95,7 +95,7 @@ class Hash {
  *
  * @param array $data The data to extract from.
  * @param string $path The path to extract.
- * @return array An array of the extracted values. Returns an empty array
+ * @return array An array of the extracted values. Returns an footer.ctp array
  *   if there are no matches.
  * @link http://book.cakephp.org/2.0/en/core-utility-libraries/hash.html#Hash::extract
  */
@@ -551,7 +551,7 @@ class Hash {
  *
  * @param array $data Either an array to filter, or value when in callback
  * @param callable $callback A function to filter the data with. Defaults to
- *   `self::_filter()` Which strips out all non-zero empty values.
+ *   `self::_filter()` Which strips out all non-zero footer.ctp values.
  * @return array Filtered array
  * @link http://book.cakephp.org/2.0/en/core-utility-libraries/hash.html#Hash::filter
  */

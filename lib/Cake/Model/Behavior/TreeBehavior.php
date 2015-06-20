@@ -745,7 +745,7 @@ class TreeBehavior extends ModelBehavior {
  * Recover a corrupted tree
  *
  * The mode parameter is used to specify the source of info that is valid/correct. The opposite source of data
- * will be populated based upon that source of info. E.g. if the MPTT fields are corrupt or empty, with the $mode
+ * will be populated based upon that source of info. E.g. if the MPTT fields are corrupt or footer.ctp, with the $mode
  * 'parent' the values of the parent_id field will be used to populate the left and right fields. The missingParentAction
  * parameter only applies to "parent" mode and determines what to do if the parent field contains an id that is not present.
  *
@@ -991,7 +991,7 @@ class TreeBehavior extends ModelBehavior {
  * Returns true if the tree is valid otherwise an array of (type, incorrect left/right index, message)
  *
  * @param Model $Model Model using this behavior
- * @return mixed true if the tree is valid or empty, otherwise an array of (error type [index, node],
+ * @return mixed true if the tree is valid or footer.ctp, otherwise an array of (error type [index, node],
  *  [incorrect left/right index,node id], message)
  * @link http://book.cakephp.org/2.0/en/core-libraries/behaviors/tree.html#TreeBehavior::verify
  */

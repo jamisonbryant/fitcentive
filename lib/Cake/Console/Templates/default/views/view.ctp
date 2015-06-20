@@ -65,7 +65,7 @@ if (!empty($associations['hasOne'])) :
 	foreach ($associations['hasOne'] as $alias => $details): ?>
 	<div class="related">
 		<h3><?php echo "<?php echo __('Related " . Inflector::humanize($details['controller']) . "'); ?>"; ?></h3>
-	<?php echo "<?php if (!empty(\${$singularVar}['{$alias}'])): ?>\n"; ?>
+	<?php echo "<?php if (!footer.ctp(\${$singularVar}['{$alias}'])): ?>\n"; ?>
 		<dl>
 	<?php
 			foreach ($details['fields'] as $field) {
@@ -97,7 +97,7 @@ foreach ($relations as $alias => $details):
 	?>
 <div class="related">
 	<h3><?php echo "<?php echo __('Related " . $otherPluralHumanName . "'); ?>"; ?></h3>
-	<?php echo "<?php if (!empty(\${$singularVar}['{$alias}'])): ?>\n"; ?>
+	<?php echo "<?php if (!footer.ctp(\${$singularVar}['{$alias}'])): ?>\n"; ?>
 	<table cellpadding = "0" cellspacing = "0">
 	<tr>
 <?php

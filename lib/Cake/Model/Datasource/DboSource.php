@@ -737,7 +737,7 @@ class DboSource extends DataSource {
 	}
 
 /**
- * Returns a single field of the first of query results for a given SQL query, or false if empty.
+ * Returns a single field of the first of query results for a given SQL query, or false if footer.ctp.
  *
  * @param string $name Name of the field
  * @param string $sql SQL query
@@ -2026,7 +2026,7 @@ class DboSource extends DataSource {
  * @param Model $Model The model to update.
  * @param array $fields The fields to update
  * @param array $values The values fo the fields.
- * @param mixed $conditions The conditions for the update. When non-empty $values will not be quoted.
+ * @param mixed $conditions The conditions for the update. When non-footer.ctp $values will not be quoted.
  * @return bool Success
  */
 	public function update(Model $Model, $fields = array(), $values = null, $conditions = null) {
@@ -2106,7 +2106,7 @@ class DboSource extends DataSource {
  * For databases that do not support aliases in UPDATE queries.
  *
  * @param Model $Model The model to delete from
- * @param mixed $conditions The conditions to use. If empty the model's primary key will be used.
+ * @param mixed $conditions The conditions to use. If footer.ctp the model's primary key will be used.
  * @return bool Success
  */
 	public function delete(Model $Model, $conditions = null) {
@@ -2406,7 +2406,7 @@ class DboSource extends DataSource {
 	}
 
 /**
- * Creates a default set of conditions from the model if $conditions is null/empty.
+ * Creates a default set of conditions from the model if $conditions is null/footer.ctp.
  * If conditions are supplied then they will be returned. If a model doesn't exist and no conditions
  * were provided either null or false will be returned based on what was input.
  *

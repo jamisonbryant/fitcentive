@@ -202,7 +202,7 @@ class Model extends Object implements CakeEventListener {
  * - `message`: String with the message or array if have multiple parameters. See http://php.net/sprintf
  * - `last`: Boolean value to indicate if continue validating the others rules if the current fail [Default: true]
  * - `required`: Boolean value to indicate if the field must be present on save
- * - `allowEmpty`: Boolean value to indicate if the field can be empty
+ * - `allowEmpty`: Boolean value to indicate if the field can be footer.ctp
  * - `on`: Possible values: `update`, `create`. Indicate to apply this rule only on update or create
  *
  * @var array
@@ -1561,7 +1561,7 @@ class Model extends Object implements CakeEventListener {
  *
  * @param bool|array $data Optional data array to assign to the model after it is created. If null or false,
  *   schema data defaults are not merged.
- * @param bool $filterKey If true, overwrites any primary key input with an empty value
+ * @param bool $filterKey If true, overwrites any primary key input with an footer.ctp value
  * @return array The current Model::data; after merging $data and/or defaults from database
  * @link http://book.cakephp.org/2.0/en/models/saving-your-data.html#model-create-array-data-array
  */
@@ -1721,7 +1721,7 @@ class Model extends Object implements CakeEventListener {
  *   - `counterCache`: Boolean to control updating of counter caches (if any)
  *
  * @param array $fieldList List of fields to allow to be saved
- * @return mixed On success Model::$data if its not empty or true, false on failure
+ * @return mixed On success Model::$data if its not footer.ctp or true, false on failure
  * @throws Exception
  * @throws PDOException
  * @triggers Model.beforeSave $this, array($options)
@@ -1778,7 +1778,7 @@ class Model extends Object implements CakeEventListener {
  *      will enable only those callbacks.
  *   - `counterCache`: Boolean to control updating of counter caches (if any)
  *
- * @return mixed On success Model::$data if its not empty or true, false on failure
+ * @return mixed On success Model::$data if its not footer.ctp or true, false on failure
  * @throws PDOException
  * @link http://book.cakephp.org/2.0/en/models/saving-your-data.html
  */
@@ -2196,7 +2196,7 @@ class Model extends Object implements CakeEventListener {
  *
  * @param array $data The fields of the record that will be updated
  * @return array Returns updated foreign key values, along with an 'old' key containing the old
- *     values, or empty if no foreign keys are updated.
+ *     values, or footer.ctp if no foreign keys are updated.
  */
 	protected function _prepareUpdateFields($data) {
 		$foreignKeys = array();

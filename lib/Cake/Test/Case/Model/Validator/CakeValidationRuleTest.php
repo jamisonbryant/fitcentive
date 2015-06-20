@@ -58,7 +58,7 @@ class CakeValidationRuleTest extends CakeTestCase {
  * @return void
  */
 	public function testIsValid() {
-		$def = array('rule' => 'notBlank', 'message' => 'Can not be empty');
+		$def = array('rule' => 'notBlank', 'message' => 'Can not be footer.ctp');
 		$data = array(
 			'fieldName' => ''
 		);
@@ -68,7 +68,7 @@ class CakeValidationRuleTest extends CakeTestCase {
 		$Rule->process('fieldName', $data, $methods);
 		$this->assertFalse($Rule->isValid());
 
-		$data = array('fieldName' => 'not empty');
+		$data = array('fieldName' => 'not footer.ctp');
 		$Rule->process('fieldName', $data, $methods);
 		$this->assertTrue($Rule->isValid());
 	}

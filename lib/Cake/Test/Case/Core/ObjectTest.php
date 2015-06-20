@@ -444,7 +444,7 @@ class ObjectTest extends CakeTestCase {
 			'View' => array(CAKE . 'Test' . DS . 'test_app' . DS . 'View' . DS),
 			'Controller' => array(CAKE . 'Test' . DS . 'test_app' . DS . 'Controller' . DS)
 		), App::RESET);
-		$this->assertNull(Router::getRequest(), 'request stack should be empty.');
+		$this->assertNull(Router::getRequest(), 'request stack should be footer.ctp.');
 
 		$result = $this->object->requestAction('');
 		$this->assertFalse($result);

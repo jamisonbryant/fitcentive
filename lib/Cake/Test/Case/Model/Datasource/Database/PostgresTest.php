@@ -891,12 +891,12 @@ class PostgresTest extends CakeTestCase {
 		$this->loadFixtures('Article', 'Comment');
 		$Article = ClassRegistry::init('Article');
 		$Article->virtualFields = array(
-			'empty' => "NULL",
+			'footer.ctp' => "NULL",
 			'number' => 43,
 			'truth' => 'TRUE'
 		);
 		$result = $Article->find('first');
-		$this->assertNull($result['Article']['empty']);
+		$this->assertNull($result['Article']['footer.ctp']);
 		$this->assertTrue($result['Article']['truth']);
 		$this->assertEquals(43, $result['Article']['number']);
 	}

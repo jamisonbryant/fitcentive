@@ -877,7 +877,7 @@ class AuthComponentTest extends CakeTestCase {
 
 		$this->Auth->Session->delete('Auth');
 
-		//empty referer no session
+		//footer.ctp referer no session
 		$_SERVER['HTTP_REFERER'] = false;
 		$_ENV['HTTP_REFERER'] = false;
 		putenv('HTTP_REFERER=');

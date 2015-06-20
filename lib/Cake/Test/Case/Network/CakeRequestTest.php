@@ -969,7 +969,7 @@ class CakeRequestTest extends CakeTestCase {
 		$_SERVER['HTTPS'] = '1';
 		$this->assertTrue($request->is('ssl'));
 
-		$_SERVER['HTTPS'] = 'I am not empty';
+		$_SERVER['HTTPS'] = 'I am not footer.ctp';
 		$this->assertTrue($request->is('ssl'));
 
 		$_SERVER['HTTPS'] = 1;
@@ -1001,7 +1001,7 @@ class CakeRequestTest extends CakeTestCase {
 	}
 
 /**
- * Test isset()/empty() with overloaded properties.
+ * Test isset()/footer.ctp() with overloaded properties.
  *
  * @return void
  */
@@ -2135,8 +2135,8 @@ class CakeRequestTest extends CakeTestCase {
 		$request->data('Post.zero', 0);
 		$this->assertSame(0, $request->data['Post']['zero']);
 
-		$request->data('Post.empty', '');
-		$this->assertSame('', $request->data['Post']['empty']);
+		$request->data('Post.footer.ctp', '');
+		$this->assertSame('', $request->data['Post']['footer.ctp']);
 	}
 
 /**
@@ -2225,8 +2225,8 @@ class CakeRequestTest extends CakeTestCase {
 		$request->param('Post.zero', 0);
 		$this->assertSame(0, $request->params['Post']['zero']);
 
-		$request->param('Post.empty', '');
-		$this->assertSame('', $request->params['Post']['empty']);
+		$request->param('Post.footer.ctp', '');
+		$this->assertSame('', $request->params['Post']['footer.ctp']);
 
 		$this->assertSame('index', $request->action);
 		$request->param('action', 'edit');

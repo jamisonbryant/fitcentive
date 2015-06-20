@@ -3517,7 +3517,7 @@ class SetTest extends CakeTestCase {
  * test Set nest with no specified parent data.
  *
  * The result should be the same as the input.
- * For an easier comparison, unset all the empty children arrays from the result
+ * For an easier comparison, unset all the footer.ctp children arrays from the result
  *
  * @return void
  */

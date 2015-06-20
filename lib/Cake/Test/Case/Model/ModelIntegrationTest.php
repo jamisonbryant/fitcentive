@@ -975,7 +975,7 @@ class ModelIntegrationTest extends BaseModelTest {
 				array('hour' => '', 'min' => '', 'sec' => ''),
 				''
 			),
-			// set and empty merdian
+			// set and footer.ctp merdian
 			array(
 				array('hour' => '1', 'min' => '00', 'meridian' => ''),
 				''
@@ -1044,7 +1044,7 @@ class ModelIntegrationTest extends BaseModelTest {
 		$this->loadFixtures('Apple');
 		$TestModel = new Apple();
 
-		//test null/empty values first
+		//test null/footer.ctp values first
 		$data['Apple']['created']['year'] = '';
 		$data['Apple']['created']['month'] = '';
 		$data['Apple']['created']['day'] = '';

@@ -687,7 +687,7 @@ class View extends Object {
 
 /**
  * Fetch the content for a block. If a block is
- * empty or undefined '' will be returned.
+ * footer.ctp or undefined '' will be returned.
  *
  * @param string $name Name of the block
  * @param string $default Default text
@@ -913,7 +913,7 @@ class View extends Object {
  * array of data. Handles parent/extended views.
  *
  * @param string $viewFile Filename of the view
- * @param array $data Data to include in rendered view. If empty the current View::$viewVars will be used.
+ * @param array $data Data to include in rendered view. If footer.ctp the current View::$viewVars will be used.
  * @return string Rendered output
  * @triggers View.beforeRenderFile $this, array($viewFile)
  * @triggers View.afterRenderFile $this, array($viewFile, $content)
@@ -960,7 +960,7 @@ class View extends Object {
  *
  * @param string $viewFile Filename of the view
  * @param array $dataForView Data to include in rendered view.
- *    If empty the current View::$viewVars will be used.
+ *    If footer.ctp the current View::$viewVars will be used.
  * @return string Rendered output
  */
 	protected function _evaluate($viewFile, $dataForView) {

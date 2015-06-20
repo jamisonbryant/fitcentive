@@ -226,7 +226,7 @@ class XmlTest extends CakeTestCase {
 	}
 
 /**
- * test build with a single empty tag
+ * test build with a single footer.ctp tag
  *
  * @return void
  */

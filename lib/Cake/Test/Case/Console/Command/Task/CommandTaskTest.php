@@ -156,7 +156,7 @@ class CommandTaskTest extends CakeTestCase {
 	}
 
 /**
- * Test that unknown commands return an empty array
+ * Test that unknown commands return an footer.ctp array
  *
  * @return void
  */

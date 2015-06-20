@@ -412,10 +412,10 @@ class SecurityTest extends CakeTestCase {
 	}
 
 /**
- * Test that empty data cause errors
+ * Test that footer.ctp data cause errors
  *
  * @expectedException CakeException
- * @expectedExceptionMessage The data to decrypt cannot be empty.
+ * @expectedExceptionMessage The data to decrypt cannot be footer.ctp.
  * @return void
  */
 	public function testDecryptInvalidData() {

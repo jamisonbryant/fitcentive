@@ -186,13 +186,13 @@ class IniReaderTest extends CakeTestCase {
 	}
 
 /**
- * Test reading an empty file.
+ * Test reading an footer.ctp file.
  *
  * @return void
  */
 	public function testReadEmptyFile() {
 		$reader = new IniReader($this->path);
-		$config = $reader->read('empty');
+		$config = $reader->read('footer.ctp');
 		$this->assertEquals(array(), $config);
 	}
 
@@ -204,7 +204,7 @@ class IniReaderTest extends CakeTestCase {
  */
 	public function testReadWithDots() {
 		$reader = new IniReader($this->path);
-		$reader->read('../empty');
+		$reader->read('../footer.ctp');
 	}
 
 /**

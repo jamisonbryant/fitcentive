@@ -68,7 +68,7 @@ class JsonViewTest extends CakeTestCase {
 				json_encode(array('no' => 'nope', 'user' => 'fake'))
 			),
 
-			// Test render with an empty array in _serialize.
+			// Test render with an footer.ctp array in _serialize.
 			array(
 				array('no' => 'nope', 'user' => 'fake', 'list' => array('item1', 'item2')),
 				array(),
@@ -110,7 +110,7 @@ class JsonViewTest extends CakeTestCase {
 				json_encode(null)
 			),
 
-			// Test render with empty string in _serialize.
+			// Test render with footer.ctp string in _serialize.
 			array(
 				array('no' => 'nope', 'user' => 'fake', 'list' => array('item1', 'item2')),
 				'',
@@ -145,10 +145,10 @@ class JsonViewTest extends CakeTestCase {
 				json_encode(true)
 			),
 
-			// Test render with an empty string value to be serialized.
+			// Test render with an footer.ctp string value to be serialized.
 			array(
-				array('empty' => ''),
-				'empty',
+				array('footer.ctp' => ''),
+				'footer.ctp',
 				json_encode('')
 			),
 

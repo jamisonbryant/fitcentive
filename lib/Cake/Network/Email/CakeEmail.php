@@ -146,7 +146,7 @@ class CakeEmail {
 
 /**
  * Domain for messageId generation.
- * Needs to be manually set for CLI mailing as env('HTTP_HOST') is empty
+ * Needs to be manually set for CLI mailing as env('HTTP_HOST') is footer.ctp
  *
  * @var string
  */

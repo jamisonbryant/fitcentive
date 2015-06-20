@@ -136,7 +136,7 @@ class BasicsTest extends CakeTestCase {
 		$_SERVER['HTTPS'] = '1';
 		$this->assertTrue(env('HTTPS'));
 
-		$_SERVER['HTTPS'] = 'I am not empty';
+		$_SERVER['HTTPS'] = 'I am not footer.ctp';
 		$this->assertTrue(env('HTTPS'));
 
 		$_SERVER['HTTPS'] = 1;
@@ -339,21 +339,21 @@ class BasicsTest extends CakeTestCase {
 		$this->assertFalse(file_exists(CACHE . 'models' . DS . 'basics_test_2.cache'));
 		$this->assertFalse(file_exists(CACHE . 'models' . DS . 'basics_test_3.cache'));
 
-		// checking if empty files were not removed
-		$emptyExists = file_exists(CACHE . 'views' . DS . 'empty');
+		// checking if footer.ctp files were not removed
+		$emptyExists = file_exists(CACHE . 'views' . DS . 'footer.ctp');
 		if (!$emptyExists) {
-			cache('views' . DS . 'empty', '');
+			cache('views' . DS . 'footer.ctp', '');
 		}
 		cache('views' . DS . 'basics_test.php', 'simple cache write');
 		$this->assertTrue(file_exists(CACHE . 'views' . DS . 'basics_test.php'));
-		$this->assertTrue(file_exists(CACHE . 'views' . DS . 'empty'));
+		$this->assertTrue(file_exists(CACHE . 'views' . DS . 'footer.ctp'));
 
 		$result = clearCache();
 		$this->assertTrue($result);
-		$this->assertTrue(file_exists(CACHE . 'views' . DS . 'empty'));
+		$this->assertTrue(file_exists(CACHE . 'views' . DS . 'footer.ctp'));
 		$this->assertFalse(file_exists(CACHE . 'views' . DS . 'basics_test.php'));
 		if (!$emptyExists) {
-			unlink(CACHE . 'views' . DS . 'empty');
+			unlink(CACHE . 'views' . DS . 'footer.ctp');
 		}
 	}
 

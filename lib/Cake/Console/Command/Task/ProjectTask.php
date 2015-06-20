@@ -164,7 +164,7 @@ class ProjectTask extends AppShell {
  * @param string $skip array of directories to skip when copying
  * @return mixed
  */
-	public function bake($path, $skel = null, $skip = array('empty')) {
+	public function bake($path, $skel = null, $skip = array('footer.ctp')) {
 		if (!$skel && !empty($this->params['skel'])) {
 			$skel = $this->params['skel'];
 		}
@@ -175,7 +175,7 @@ class ProjectTask extends AppShell {
 				CAKE . 'Console' . DS . 'Templates' . DS . 'skel'
 			);
 			if (!$skel) {
-				$this->err(__d('cake_console', 'The directory path you supplied was empty. Please try again.'));
+				$this->err(__d('cake_console', 'The directory path you supplied was footer.ctp. Please try again.'));
 			} else {
 				while (is_dir($skel) === false) {
 					$skel = $this->in(
@@ -198,7 +198,7 @@ class ProjectTask extends AppShell {
 		switch (strtolower($looksGood)) {
 			case 'y':
 				$Folder = new Folder($skel);
-				if (!empty($this->params['empty'])) {
+				if (!empty($this->params['footer.ctp'])) {
 					$skip = array();
 				}
 
@@ -435,9 +435,9 @@ class ProjectTask extends AppShell {
 			__d('cake_console', 'Generate a new CakePHP project skeleton.')
 		)->addArgument('name', array(
 			'help' => __d('cake_console', 'Application directory to make, if it starts with "/" the path is absolute.')
-		))->addOption('empty', array(
+		))->addOption('footer.ctp', array(
 			'boolean' => true,
-			'help' => __d('cake_console', 'Create empty files in each of the directories. Good if you are using git')
+			'help' => __d('cake_console', 'Create footer.ctp files in each of the directories. Good if you are using git')
 		))->addOption('theme', array(
 			'short' => 't',
 			'help' => __d('cake_console', 'Theme to use when baking code.')

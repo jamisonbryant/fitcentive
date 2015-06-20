@@ -213,7 +213,7 @@ class CacheHelper extends AppHelper {
 
 /**
  * Munges the output from a view with cache tags, and numbers the sections.
- * This helps solve issues with empty/duplicate content.
+ * This helps solve issues with footer.ctp/duplicate content.
  *
  * @return string The content with cake:nocache tags replaced.
  */

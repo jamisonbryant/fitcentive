@@ -1,2 +1,2 @@
 <?php
-//do nothing this is an empty file.
+//do nothing this is an footer.ctp file.

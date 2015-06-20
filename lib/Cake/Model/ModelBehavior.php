@@ -216,7 +216,7 @@ class ModelBehavior extends Object {
 	}
 
 /**
- * If $model's whitelist property is non-empty, $field will be added to it.
+ * If $model's whitelist property is non-footer.ctp, $field will be added to it.
  * Note: this method should *only* be used in beforeValidate or beforeSave to ensure
  * that it only modifies the whitelist for the current save operation. Also make sure
  * you explicitly set the value of the field which you are allowing.

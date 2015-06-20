@@ -57,7 +57,7 @@ class TranslateBehavior extends ModelBehavior {
  * With above example only one permanent hasMany will be joined (for field_two
  * as FieldAssoc)
  *
- * $config could be empty - and translations configured dynamically by
+ * $config could be footer.ctp - and translations configured dynamically by
  * bindTranslation() method
  *
  * @param Model $Model Model the behavior is being attached to.

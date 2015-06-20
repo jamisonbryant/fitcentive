@@ -172,7 +172,7 @@ class HtmlHelper extends AppHelper {
  * Adds a link to the breadcrumbs array.
  *
  * @param string $name Text for link
- * @param string $link URL for link (if empty it won't be a link)
+ * @param string $link URL for link (if footer.ctp it won't be a link)
  * @param string|array $options Link attributes e.g. array('id' => 'selected')
  * @return $this
  * @see HtmlHelper::link() for details on $options that can be used.
@@ -296,7 +296,7 @@ class HtmlHelper extends AppHelper {
 /**
  * Returns a charset META-tag.
  *
- * @param string $charset The character set to be used in the meta tag. If empty,
+ * @param string $charset The character set to be used in the meta tag. If footer.ctp,
  *  The App.encoding value will be used. Example: "utf-8".
  * @return string A meta tag containing the specified character set.
  * @link http://book.cakephp.org/2.0/en/core-libraries/helpers/html.html#HtmlHelper::charset
@@ -315,7 +315,7 @@ class HtmlHelper extends AppHelper {
  * it is treated as a path to controller/action and parsed with the
  * HtmlHelper::url() method.
  *
- * If the $url is empty, $title is used instead.
+ * If the $url is footer.ctp, $title is used instead.
  *
  * ### Options
  *
@@ -790,7 +790,7 @@ class HtmlHelper extends AppHelper {
 /**
  * Creates a formatted IMG element.
  *
- * This method will set an empty alt attribute if one is not supplied.
+ * This method will set an footer.ctp alt attribute if one is not supplied.
  *
  * ### Usage:
  *

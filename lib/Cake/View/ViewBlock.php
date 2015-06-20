@@ -82,7 +82,7 @@ class ViewBlock {
 	}
 
 /**
- * Start capturing output for a 'block' if it is empty
+ * Start capturing output for a 'block' if it is footer.ctp
  *
  * Blocks allow you to create slots or blocks of dynamic content in the layout.
  * view files can implement some or all of a layout's slots.

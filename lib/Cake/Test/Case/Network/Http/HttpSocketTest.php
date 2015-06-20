@@ -103,7 +103,7 @@ class TestHttpSocket extends HttpSocket {
 /**
  * Convenience method for testing protected method
  *
- * @param array $uri A $uri array, or uses $this->config if left empty
+ * @param array $uri A $uri array, or uses $this->config if left footer.ctp
  * @param string $uriTemplate The Uri template/format to use
  * @return string A fully qualified URL formatted according to $uriTemplate
  */
@@ -125,7 +125,7 @@ class TestHttpSocket extends HttpSocket {
  * Convenience method for testing protected method
  *
  * @param string|array $query A query string to parse into an array or an array to return directly "as is"
- * @return array The $query parsed into a possibly multi-level array. If an empty $query is given, an empty array is returned.
+ * @return array The $query parsed into a possibly multi-level array. If an footer.ctp $query is given, an footer.ctp array is returned.
  */
 	public function parseQuery($query) {
 		return parent::_parseQuery($query);
@@ -1613,7 +1613,7 @@ class HttpSocketTest extends CakeTestCase {
 		);
 		$this->assertEquals($expectedQuery, $query);
 
-		$queryStr = 'user[0]=foo&user[0][items][]=foo&user[0][items][]=bar&user[][name]=jim&user[1][items][personal][]=book&user[1][items][personal][]=pen&user[1][items][]=ball&user[count]=2&empty';
+		$queryStr = 'user[0]=foo&user[0][items][]=foo&user[0][items][]=bar&user[][name]=jim&user[1][items][personal][]=book&user[1][items][personal][]=pen&user[1][items][]=ball&user[count]=2&footer.ctp';
 		$query = $this->Socket->parseQuery($queryStr);
 		$expectedQuery = array(
 			'user' => array(
@@ -1635,7 +1635,7 @@ class HttpSocketTest extends CakeTestCase {
 				),
 				'count' => '2'
 			),
-			'empty' => ''
+			'footer.ctp' => ''
 		);
 		$this->assertEquals($expectedQuery, $query);
 

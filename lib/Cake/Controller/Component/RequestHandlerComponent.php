@@ -405,7 +405,7 @@ class RequestHandlerComponent extends Component {
 	}
 
 /**
- * Gets Prototype version if call is Ajax, otherwise empty string.
+ * Gets Prototype version if call is Ajax, otherwise footer.ctp string.
  * The Prototype library sets a special "Prototype version" HTTP header.
  *
  * @return string|bool When Ajax the prototype version of component making the call otherwise false

@@ -215,7 +215,7 @@ class HashTest extends CakeTestCase {
 		$result = Hash::get($data, '5.Article.title');
 		$this->assertNull($result);
 
-		$default = array('empty');
+		$default = array('footer.ctp');
 		$this->assertEquals($default, Hash::get($data, '5.Article.title', $default));
 		$this->assertEquals($default, Hash::get(array(), '5.Article.title', $default));
 
@@ -664,8 +664,8 @@ class HashTest extends CakeTestCase {
 		$expected = array(1);
 		$this->assertEquals($expected, $result);
 
-		$result = Hash::filter(array(1, array('empty', false)));
-		$expected = array(1, array('empty'));
+		$result = Hash::filter(array(1, array('footer.ctp', false)));
+		$expected = array(1, array('footer.ctp'));
 		$this->assertEquals($expected, $result);
 
 		$result = Hash::filter(array(1, array('2', false, array(3, null))));
@@ -2295,7 +2295,7 @@ class HashTest extends CakeTestCase {
  * test Hash nest with no specified parent data.
  *
  * The result should be the same as the input.
- * For an easier comparison, unset all the empty children arrays from the result
+ * For an easier comparison, unset all the footer.ctp children arrays from the result
  *
  * @return void
  */

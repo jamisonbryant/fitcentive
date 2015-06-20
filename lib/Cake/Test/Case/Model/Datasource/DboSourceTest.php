@@ -185,16 +185,16 @@ class DboSourceTest extends CakeTestCase {
 	}
 
 /**
- * test that booleans work on empty set.
+ * test that booleans work on footer.ctp set.
  *
  * @return void
  */
 	public function testBooleanEmptyConditionsParsing() {
 		$result = $this->testDb->conditions(array('OR' => array()));
-		$this->assertEquals(' WHERE  1 = 1', $result, 'empty conditions failed');
+		$this->assertEquals(' WHERE  1 = 1', $result, 'footer.ctp conditions failed');
 
 		$result = $this->testDb->conditions(array('OR' => array('OR' => array())));
-		$this->assertEquals(' WHERE  1 = 1', $result, 'nested empty conditions failed');
+		$this->assertEquals(' WHERE  1 = 1', $result, 'nested footer.ctp conditions failed');
 	}
 
 /**
@@ -785,7 +785,7 @@ class DboSourceTest extends CakeTestCase {
 	}
 
 /**
- * Test NOT NULL on ENUM data type with empty string as a value
+ * Test NOT NULL on ENUM data type with footer.ctp string as a value
  *
  * @return void
  */
@@ -861,7 +861,7 @@ class DboSourceTest extends CakeTestCase {
 		$result = $testdb->fullTableName($Article, false, true);
 		$this->assertEquals($testdb->getSchemaName() . '.articles', $result);
 
-		// tests for empty schemaName
+		// tests for footer.ctp schemaName
 		$noschema = ConnectionManager::create('noschema', array(
 			'datasource' => 'DboTestSource'
 			));
@@ -992,7 +992,7 @@ class DboSourceTest extends CakeTestCase {
 
 		$Article = ClassRegistry::init('Article');
 		$this->testDb->fields($Article, null, array('title', 'body', 'published'));
-		$this->assertTrue(empty(DboTestSource::$methodCache['fields']), 'Cache not empty');
+		$this->assertTrue(empty(DboTestSource::$methodCache['fields']), 'Cache not footer.ctp');
 	}
 
 /**
@@ -1460,7 +1460,7 @@ class DboSourceTest extends CakeTestCase {
 		$Article = ClassRegistry::init('Article');
 		$db = $Article->getDataSource();
 
-		// Creates a default set of conditions from the model if $conditions is null/empty.
+		// Creates a default set of conditions from the model if $conditions is null/footer.ctp.
 		$Article->id = 1;
 		$result = $db->defaultConditions($Article, null);
 		$this->assertEquals(array('Article.id' => 1), $result);

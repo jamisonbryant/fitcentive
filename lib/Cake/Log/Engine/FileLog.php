@@ -80,7 +80,7 @@ class FileLog extends BaseLog {
  *   human reabable string values like '10MB', '100KB' etc.
  * - `rotate` Log files are rotated specified times before being removed.
  *   If value is 0, old versions are removed rather then rotated.
- * - `mask` A mask is applied when log files are created. Left empty no chmod
+ * - `mask` A mask is applied when log files are created. Left footer.ctp no chmod
  *   is made.
  *
  * @param array $config Options for the FileLog, see above.

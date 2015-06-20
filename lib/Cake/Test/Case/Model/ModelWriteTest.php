@@ -2009,7 +2009,7 @@ class ModelWriteTest extends BaseModelTest {
 	}
 
 /**
- * test that saving HABTM with an empty array will clear existing HABTM if
+ * test that saving HABTM with an footer.ctp array will clear existing HABTM if
  * unique is true
  *
  * @return void
@@ -3509,7 +3509,7 @@ class ModelWriteTest extends BaseModelTest {
 			array(
 				'id' => '2',
 				'title' => '',
-				'body' => 'Trying to get away with an empty title'
+				'body' => 'Trying to get away with an footer.ctp title'
 			)
 		), array('validate' => true, 'atomic' => false));
 		$this->assertSame(array(true, false), $result);
@@ -4889,7 +4889,7 @@ class ModelWriteTest extends BaseModelTest {
 			array(
 				'id' => '2',
 				'title' => '',
-				'body' => 'Trying to get away with an empty title'
+				'body' => 'Trying to get away with an footer.ctp title'
 		));
 		$result = $TestModel->saveAll($data);
 		$this->assertFalse($result);
@@ -4915,7 +4915,7 @@ class ModelWriteTest extends BaseModelTest {
 			array(
 				'id' => '2',
 				'title' => '',
-				'body' => 'Trying to get away with an empty title'
+				'body' => 'Trying to get away with an footer.ctp title'
 		));
 		$result = $TestModel->saveAll($data, array('validate' => true, 'atomic' => false));
 		$this->assertEquals(array(true, false), $result);
@@ -4985,7 +4985,7 @@ class ModelWriteTest extends BaseModelTest {
 			array(
 				'id' => '2',
 				'title' => '',
-				'body' => 'Trying to get away with an empty title'
+				'body' => 'Trying to get away with an footer.ctp title'
 		));
 		$this->assertFalse($TestModel->saveAll($data, array('validate' => 'first')));
 
@@ -5292,9 +5292,9 @@ class ModelWriteTest extends BaseModelTest {
 	}
 
 /**
- * test that saveAll behaves like plain save() when supplied empty data
+ * test that saveAll behaves like plain save() when supplied footer.ctp data
  *
- * @link https://cakephp.lighthouseapp.com/projects/42648/tickets/277-test-saveall-with-validation-returns-incorrect-boolean-when-saving-empty-data
+ * @link https://cakephp.lighthouseapp.com/projects/42648/tickets/277-test-saveall-with-validation-returns-incorrect-boolean-when-saving-footer.ctp-data
  * @return void
  */
 	public function testSaveAllEmptyData() {
@@ -5800,7 +5800,7 @@ class ModelWriteTest extends BaseModelTest {
 			array(
 				'id' => '2',
 				'title' => '',
-				'body' => 'Trying to get away with an empty title'
+				'body' => 'Trying to get away with an footer.ctp title'
 			)
 		), array('validate' => true, 'atomic' => false));
 
@@ -5894,7 +5894,7 @@ class ModelWriteTest extends BaseModelTest {
 		$TestModel->belongsTo = $TestModel->hasAndBelongsToMany = array();
 		$TestModel->validate = $TestModel->Comment->validate = array('user_id' => array('notBlank' => array('rule' => 'notBlank', 'required' => true)));
 
-		//empty hasMany data is ignored in save
+		//footer.ctp hasMany data is ignored in save
 		$result = $TestModel->saveAssociated(array(
 			'Article' => array('title' => 'title', 'user_id' => 1),
 			'Comment' => array()
@@ -5907,7 +5907,7 @@ class ModelWriteTest extends BaseModelTest {
 		), array('validate' => true, 'atomic' => false));
 		$this->assertEquals(array('Article' => true), $result);
 
-		//empty primary data is not ignored
+		//footer.ctp primary data is not ignored
 		$result = $TestModel->saveAssociated(array('Article' => array()), array('validate' => true));
 		$this->assertFalse($result);
 
@@ -6406,7 +6406,7 @@ class ModelWriteTest extends BaseModelTest {
 			array(
 				'id' => '2',
 				'title' => '',
-				'body' => 'Trying to get away with an empty title'
+				'body' => 'Trying to get away with an footer.ctp title'
 		));
 		$result = $TestModel->saveMany($data);
 		$this->assertFalse($result);
@@ -6432,7 +6432,7 @@ class ModelWriteTest extends BaseModelTest {
 			array(
 				'id' => '2',
 				'title' => '',
-				'body' => 'Trying to get away with an empty title'
+				'body' => 'Trying to get away with an footer.ctp title'
 		));
 		$result = $TestModel->saveMany($data, array('validate' => true, 'atomic' => false));
 		$this->assertEquals(array(true, false), $result);
@@ -6489,7 +6489,7 @@ class ModelWriteTest extends BaseModelTest {
 			array(
 				'id' => '2',
 				'title' => '',
-				'body' => 'Trying to get away with an empty title'
+				'body' => 'Trying to get away with an footer.ctp title'
 		));
 		$this->assertFalse($TestModel->saveMany($data, array('validate' => 'first')));
 
@@ -6760,9 +6760,9 @@ class ModelWriteTest extends BaseModelTest {
 	}
 
 /**
- * test that saveMany behaves like plain save() when suplied empty data
+ * test that saveMany behaves like plain save() when suplied footer.ctp data
  *
- * @link https://cakephp.lighthouseapp.com/projects/42648/tickets/277-test-saveall-with-validation-returns-incorrect-boolean-when-saving-empty-data
+ * @link https://cakephp.lighthouseapp.com/projects/42648/tickets/277-test-saveall-with-validation-returns-incorrect-boolean-when-saving-footer.ctp-data
  * @return void
  */
 	public function testSaveManyEmptyData() {
@@ -6779,9 +6779,9 @@ class ModelWriteTest extends BaseModelTest {
 	}
 
 /**
- * test that saveAssociated behaves like plain save() when supplied empty data
+ * test that saveAssociated behaves like plain save() when supplied footer.ctp data
  *
- * @link https://cakephp.lighthouseapp.com/projects/42648/tickets/277-test-saveall-with-validation-returns-incorrect-boolean-when-saving-empty-data
+ * @link https://cakephp.lighthouseapp.com/projects/42648/tickets/277-test-saveall-with-validation-returns-incorrect-boolean-when-saving-footer.ctp-data
  * @return void
  */
 	public function testSaveAssociatedEmptyData() {
@@ -6957,7 +6957,7 @@ class ModelWriteTest extends BaseModelTest {
 	}
 
 /**
- * test updateAll with empty values.
+ * test updateAll with footer.ctp values.
  *
  * @return void
  */

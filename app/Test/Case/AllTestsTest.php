@@ -1,5 +1,7 @@
 <?php
 /**
+ * AllTests file
+ *
  * CakePHP(tm) : Rapid Development Framework (http://cakephp.org)
  * Copyright (c) Cake Software Foundation, Inc. (http://cakefoundation.org)
  *
@@ -9,15 +11,21 @@
  *
  * @copyright     Copyright (c) Cake Software Foundation, Inc. (http://cakefoundation.org)
  * @link          http://cakephp.org CakePHP(tm) Project
- * @package       app.View.Emails.html
- * @since         CakePHP(tm) v 0.10.0.1076
+ * @package       app.Test.Case
+ * @since         CakePHP(tm) v 2.5
  * @license       http://www.opensource.org/licenses/mit-license.php MIT License
  */
-?>
-<?php
-$content = explode("\n", $content);
 
-foreach ($content as $line):
-	echo '<p> ' . $line . "</p>\n";
-endforeach;
-?>
+class AllTestsTest extends CakeTestSuite {
+
+/**
+ * Get the suite object.
+ *
+ * @return CakeTestSuite Suite class instance.
+ */
+	public static function suite() {
+		$suite = new CakeTestSuite('All application tests');
+		$suite->addTestDirectoryRecursive(TESTS . 'Case');
+		return $suite;
+	}
+}

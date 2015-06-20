@@ -6,7 +6,7 @@ import android.view.Menu;
 import android.view.MenuItem;
 
 
-public class LeaderboardActivity extends ActionBarActivity {
+public class LeaderboardActivity extends MainActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

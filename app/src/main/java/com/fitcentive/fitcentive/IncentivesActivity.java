@@ -6,7 +6,7 @@ import android.view.Menu;
 import android.view.MenuItem;
 
 
-public class IncentivesActivity extends ActionBarActivity {
+public class IncentivesActivity extends MainActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

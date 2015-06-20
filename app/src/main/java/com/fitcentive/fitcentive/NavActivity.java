@@ -21,7 +21,7 @@ import android.support.v4.widget.DrawerLayout;
  *
  * @author Jamison Bryant <robojamison@gmail.com>
  */
-public class NavActivity extends AppCompatActivity
+public class NavActivity extends MainActivity
         implements NavigationDrawerFragment.NavigationDrawerCallbacks {
 
     /**

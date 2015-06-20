@@ -6,7 +6,7 @@ import android.view.Menu;
 import android.view.MenuItem;
 
 
-public class EventsActivity extends ActionBarActivity {
+public class EventsActivity extends MainActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

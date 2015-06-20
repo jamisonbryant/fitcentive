@@ -6,7 +6,7 @@ import android.view.Menu;
 import android.view.MenuItem;
 
 
-public class ExerciseActivity extends ActionBarActivity {
+public class ExerciseActivity extends MainActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

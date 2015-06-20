@@ -1,25 +1,27 @@
 package com.fitcentive.fitcentive;
 
 import android.app.Activity;
-import android.support.v7.app.ActionBarActivity;
+import android.content.Intent;
 import android.support.v7.app.ActionBar;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
-import android.content.Context;
-import android.os.Build;
 import android.os.Bundle;
-import android.view.Gravity;
+import android.support.v7.app.AppCompatActivity;
 import android.view.LayoutInflater;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
 import android.support.v4.widget.DrawerLayout;
-import android.widget.ArrayAdapter;
-import android.widget.TextView;
 
-
-public class NavActivity extends ActionBarActivity
+/**
+ * Nav Activity
+ *
+ * Implements the navigation menu that allows the user to get around the app.
+ *
+ * @author Jamison Bryant <robojamison@gmail.com>
+ */
+public class NavActivity extends AppCompatActivity
         implements NavigationDrawerFragment.NavigationDrawerCallbacks {
 
     /**
@@ -59,24 +61,22 @@ public class NavActivity extends ActionBarActivity
     public void onSectionAttached(int number) {
         switch (number) {
             case 1:
-                mTitle = getString(R.string.title_section1);
+                mTitle = getString(R.string.section_data);
                 break;
             case 2:
-                mTitle = getString(R.string.title_section2);
+                mTitle = getString(R.string.section_rewards);
                 break;
             case 3:
-                mTitle = getString(R.string.title_section3);
+                mTitle = getString(R.string.section_analytics);
                 break;
         }
     }
 
     public void restoreActionBar() {
         ActionBar actionBar = getSupportActionBar();
-        actionBar.setNavigationMode(ActionBar.NAVIGATION_MODE_STANDARD);
         actionBar.setDisplayShowTitleEnabled(true);
         actionBar.setTitle(mTitle);
     }
-
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
@@ -88,19 +88,53 @@ public class NavActivity extends ActionBarActivity
             restoreActionBar();
             return true;
         }
+
         return super.onCreateOptionsMenu(menu);
     }
 
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
-        // Handle action bar item clicks here. The action bar will
-        // automatically handle clicks on the Home/Up button, so long
-        // as you specify a parent activity in AndroidManifest.xml.
-        int id = item.getItemId();
+        // Handle selected action
+        switch (item.getItemId()) {
+            case R.id.action_food:
+                Intent food_intent = new Intent(this, FoodActivity.class);
+                startActivity(food_intent);
+                break;
 
-        //noinspection SimplifiableIfStatement
-        if (id == R.id.action_settings) {
-            return true;
+            case R.id.action_exercise:
+                Intent exercise_intent = new Intent(this, ExerciseActivity.class);
+                startActivity(exercise_intent);
+                break;
+
+            case R.id.action_events:
+                Intent events_intent = new Intent(this, EventsActivity.class);
+                startActivity(events_intent);
+                break;
+
+            case R.id.action_incentives:
+                Intent incentives_intent = new Intent(this, IncentivesActivity.class);
+                startActivity(incentives_intent);
+                break;
+
+            case R.id.action_tokens:
+                Intent tokens_intent = new Intent(this, TokensActivity.class);
+                startActivity(tokens_intent);
+                break;
+
+            case R.id.action_performance:
+                Intent performance_intent = new Intent(this, PerformanceActivity.class);
+                startActivity(performance_intent);
+                break;
+
+            case R.id.action_leaderboard:
+                Intent leaderboard_intent = new Intent(this, LeaderboardActivity.class);
+                startActivity(leaderboard_intent);
+                break;
+
+            case R.id.action_settings:
+//                Intent settings_intent = new Intent(this, FoodActivity.class);
+//                startActivity(settings_intent);
+                break;
         }
 
         return super.onOptionsItemSelected(item);
@@ -145,5 +179,6 @@ public class NavActivity extends ActionBarActivity
                     getArguments().getInt(ARG_SECTION_NUMBER));
         }
     }
+
 
 }

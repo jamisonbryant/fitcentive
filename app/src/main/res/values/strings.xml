@@ -18,13 +18,14 @@
     <string name="disconnect">Disconnect</string>
 
     <!-- Images -->
-    <string name="desc_google_icon">Google Logo</string>
+    <string name="desc_logo_icon">Google Logo</string>
     <string name="title_activity_nav">Navigation menu</string>
 
     <!-- Navmenu -->
     <string name="section_data">Data</string>
     <string name="section_rewards">Rewards</string>
     <string name="section_analytics">Analytics</string>
+    <string name="navigation_menu_title">Menu</string>
     <string name="navigation_drawer_open">Open navigation drawer</string>
     <string name="navigation_drawer_close">Close navigation drawer</string>
 

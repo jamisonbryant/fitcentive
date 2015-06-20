@@ -15,7 +15,7 @@
 	<ul>
 
 		<li><?php echo $this->Form->postLink(__('Delete'), array('action' => 'delete', $this->Form->value('Input.id')), array(), __('Are you sure you want to delete # %s?', $this->Form->value('Input.id'))); ?></li>
-		<li><?php echo $this->Html->link(__('List Inputs'), array('action' => 'index')); ?></li>
+		<li><?php echo $this->Html->link(__('List Intakes'), array('action' => 'index')); ?></li>
 		<li><?php echo $this->Html->link(__('List Users'), array('controller' => 'users', 'action' => 'index')); ?> </li>
 		<li><?php echo $this->Html->link(__('New User'), array('controller' => 'users', 'action' => 'add')); ?> </li>
 	</ul>

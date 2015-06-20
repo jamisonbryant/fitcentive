@@ -1,22 +1,12 @@
-# User specific & automatically generated files #
-#################################################
-/app/Config/database.php
+# CakePHP
 /app/tmp
 /lib/Cake/Console/Templates/skel/tmp/
-/plugins
-/vendors
-/build
-/dist
-/tags
 *.mo
 
-# IDE and editor specific files #
-#################################
-/nbproject
+# PhpStorm
 .idea
 
 # OS generated files #
-######################
 .DS_Store
 .DS_Store?
 ._*

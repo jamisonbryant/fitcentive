@@ -26,8 +26,8 @@ class User extends AppModel {
  * @var array
  */
 	public $hasMany = array(
-		'Input' => array(
-			'className' => 'Input',
+		'Intake' => array(
+			'className' => 'Intake',
 			'foreignKey' => 'user_id',
 			'dependent' => false,
 			'conditions' => '',

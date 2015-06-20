@@ -6003,7 +6003,7 @@ label {
   color: #9e9e9e; }
 
 /***************************
-   Text Inputs + Textarea
+   Text Intakes + Textarea
 ****************************/
 ::-webkit-input-placeholder {
   color: #d1d1d1; }
@@ -6708,7 +6708,7 @@ input[type=range]:focus::-ms-fill-upper {
   background: #ccc; }
 
 /***************************
-   Text Inputs + Textarea
+   Text Intakes + Textarea
 ****************************/
 select {
   background-color: rgba(255, 255, 255, 0.9);

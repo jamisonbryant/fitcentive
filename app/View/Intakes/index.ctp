@@ -1,5 +1,5 @@
 <div class="inputs index">
-	<h2><?php echo __('Inputs'); ?></h2>
+	<h2><?php echo __('Intakes'); ?></h2>
 	<table cellpadding="0" cellspacing="0">
 	<thead>
 	<tr>

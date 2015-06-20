@@ -19,25 +19,16 @@
 
     <!-- Action links -->
     <li>
-        <?php echo $this->Html->link('Condos', '/condos/manage'); ?>
+        <?php echo $this->Html->link('Food', '/intakes/manage'); ?>
     </li>
     <li>
-        <?php echo $this->Html->link('Owners', '/owners/manage'); ?>
+        <?php echo $this->Html->link('Exercise', '/outputs/manage'); ?>
     </li>
     <li>
-        <?php echo $this->Html->link('Renters', '/renters/manage'); ?>
+        <?php echo $this->Html->link('Events', '/events/manage'); ?>
     </li>
     <li>
-        <?php echo $this->Html->link('Guests', '/guests/manage'); ?>
-    </li>
-    <li>
-        <?php echo $this->Html->link('Passes', '/passes/manage'); ?>
-    </li>
-    <li>
-        <?php echo $this->Html->link('Wristbands', '/wristbands/manage'); ?>
-    </li>
-    <li>
-        <?php echo $this->Html->link('Vehicles', '/vehicles/manage'); ?>
+        <?php echo $this->Html->link('Incentives', '/incentives/manage'); ?>
     </li>
 
     <li class="divider"></li>
@@ -45,16 +36,16 @@
     <!-- Other links -->
     <li class="bold">
         <i class="mdi-action-bug-report small"></i>
-        <?php echo $this->Html->link('Report Bug', '/bugs/report'); ?>
+        <?php echo $this->Html->link('Report Bug', 'javascript:void(0);'); ?>
     </li>
 
     <li class="bold">
         <i class="mdi-action-settings small"></i>
-        <?php echo $this->Html->link('Settings', '/users/settings'); ?>
+        <?php echo $this->Html->link('Settings', 'javascript:void(0);'); ?>
     </li>
 
     <li class="bold">
         <i class="mdi-action-help small"></i>
-        <?php echo $this->Html->link('Get Help', '/pages/help'); ?>
+        <?php echo $this->Html->link('Help & Support', 'javascript:void(0);'); ?>
     </li>
 </ul>

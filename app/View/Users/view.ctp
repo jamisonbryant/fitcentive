@@ -40,7 +40,7 @@
 		<li><?php echo $this->Form->postLink(__('Delete User'), array('action' => 'delete', $user['User']['id']), array(), __('Are you sure you want to delete # %s?', $user['User']['id'])); ?> </li>
 		<li><?php echo $this->Html->link(__('List Users'), array('action' => 'index')); ?> </li>
 		<li><?php echo $this->Html->link(__('New User'), array('action' => 'add')); ?> </li>
-		<li><?php echo $this->Html->link(__('List Inputs'), array('controller' => 'inputs', 'action' => 'index')); ?> </li>
+		<li><?php echo $this->Html->link(__('List Intakes'), array('controller' => 'inputs', 'action' => 'index')); ?> </li>
 		<li><?php echo $this->Html->link(__('New Input'), array('controller' => 'inputs', 'action' => 'add')); ?> </li>
 		<li><?php echo $this->Html->link(__('List Outputs'), array('controller' => 'outputs', 'action' => 'index')); ?> </li>
 		<li><?php echo $this->Html->link(__('New Output'), array('controller' => 'outputs', 'action' => 'add')); ?> </li>
@@ -51,7 +51,7 @@
 	</ul>
 </div>
 <div class="related">
-	<h3><?php echo __('Related Inputs'); ?></h3>
+	<h3><?php echo __('Related Intakes'); ?></h3>
 	<?php if (!empty($user['Input'])): ?>
 	<table cellpadding = "0" cellspacing = "0">
 	<tr>

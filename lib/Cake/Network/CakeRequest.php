@@ -44,7 +44,7 @@ class CakeRequest implements ArrayAccess {
 
 /**
  * Array of POST data. Will contain form data as well as uploaded files.
- * Inputs prefixed with 'data' will have the data prefix removed. If there is
+ * Intakes prefixed with 'data' will have the data prefix removed. If there is
  * overlap between an input prefixed with data and one without, the 'data' prefixed
  * value will take precedence.
  *

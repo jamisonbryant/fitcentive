@@ -7,7 +7,7 @@ CREATE TABLE users (
   modified DATETIME DEFAULT NULL
 );
 
-CREATE TABLE inputs (
+CREATE TABLE intakes (
   id INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
   amount INT NOT NULL,
   user_id INT NOT NULL,

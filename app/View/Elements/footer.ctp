@@ -3,6 +3,6 @@
 		Design by <a href="http://github.com/DC-Code-A-Thon">Team Fitcentive</a>
 	</span>
 	<span class="grey-text right text-lighten-1" id="version">
-		<?php if (Configure::read('debug') > 0) echo $this->Version->long(); ?>
+		Made for the 2015 DC Code-a-Thon
 	</span>
 </nav>

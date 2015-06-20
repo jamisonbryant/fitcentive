@@ -1,10 +1,10 @@
 <?php
 App::uses('AppController', 'Controller');
 /**
- * Inputs Controller
+ * Intakes Controller
  *
  */
-class InputsController extends AppController {
+class IntakesController extends AppController {
 
 /**
  * Scaffold

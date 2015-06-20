@@ -1,11 +1,11 @@
 <?php
 App::uses('AppModel', 'Model');
 /**
- * Input Model
+ * Intake Model
  *
  * @property User $User
  */
-class Input extends AppModel {
+class Intake extends AppModel {
 
 
 	//The Associations below have been created with all possible keys, those that are not needed can be removed

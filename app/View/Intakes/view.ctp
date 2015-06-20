@@ -33,7 +33,7 @@
 	<ul>
 		<li><?php echo $this->Html->link(__('Edit Input'), array('action' => 'edit', $input['Input']['id'])); ?> </li>
 		<li><?php echo $this->Form->postLink(__('Delete Input'), array('action' => 'delete', $input['Input']['id']), array(), __('Are you sure you want to delete # %s?', $input['Input']['id'])); ?> </li>
-		<li><?php echo $this->Html->link(__('List Inputs'), array('action' => 'index')); ?> </li>
+		<li><?php echo $this->Html->link(__('List Intakes'), array('action' => 'index')); ?> </li>
 		<li><?php echo $this->Html->link(__('New Input'), array('action' => 'add')); ?> </li>
 		<li><?php echo $this->Html->link(__('List Users'), array('controller' => 'users', 'action' => 'index')); ?> </li>
 		<li><?php echo $this->Html->link(__('New User'), array('controller' => 'users', 'action' => 'add')); ?> </li>

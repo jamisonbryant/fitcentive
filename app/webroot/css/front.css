@@ -2,11 +2,10 @@
  * Documents
  */
 html {
-    background: url(../img/fingers.png) no-repeat center center fixed;
+    background: url(../img/yoga.png) no-repeat center center fixed;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
-    background-position-y: -200px;
     background-size: cover;
 }
 

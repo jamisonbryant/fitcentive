@@ -11,18 +11,17 @@
             <!-- Stats -->
             <?php $stats = $this->requestAction('/users/stats'); ?>
             <li>
-                <?php echo $this->Html->link('<i class="mdi-maps-local-restaurant left"></i>' . $stats['intake'],
+                <?php echo $this->Html->link('<i class="mdi-maps-local-restaurant left"></i>350',
                     '/intake/manage', array('escape' => false)); ?> in
             </li>
 
             <li>
-                <?php echo $this->Html->link('<i class="mdi-maps-directions-bike left"></i>' . $stats['output'],
+                <?php echo $this->Html->link('<i class="mdi-maps-directions-bike left"></i>1000',
                     '/output/manage', array('escape' => false)); ?> out
             </li>
 
             <li>
-                <?php echo $this->Html->link('<i class="mdi-editor-format-size left"></i>' .
-                    (!empty(AuthComponent::user('tokens')) ? AuthComponent::user('tokens') : 0),
+                <?php echo $this->Html->link('<i class="mdi-editor-format-size left"></i>330',
                     '/output/manage', array('escape' => false)); ?>
             </li>
 

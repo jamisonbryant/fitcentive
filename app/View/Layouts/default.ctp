@@ -26,14 +26,17 @@
             <?php echo $this->element('header'); ?>
         </header>
 
-        <!-- Preloader -->
-        <?php if (isset($preloader) && $preloader === true) echo $this->element('preloader'); ?>
-
-       <!-- Toast -->
-        <?php if (isset($toast) && !empty($toast)) echo $this->element('toast', array('text' => $toast)) ?>
-
         <!-- Body -->
         <main id="body">
+            <!-- Parallax -->
+            <?php if (isset($image) && !empty($image)) echo $this->element('parallax', array('image' => $image)) ?>
+
+            <!-- Preloader -->
+            <?php if (isset($preloader) && $preloader === true) echo $this->element('preloader'); ?>
+
+            <!-- Toast -->
+            <?php if (isset($toast) && !empty($toast)) echo $this->element('toast', array('text' => $toast)) ?>
+
             <div class="container">
                 <?php echo $this->fetch('content'); ?>
             </div>

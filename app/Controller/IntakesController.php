@@ -10,7 +10,14 @@ class IntakesController extends AppController {
      * Manage action
      */
     public function manage() {
-        $this->set('intakes', $this->Intake->find('all'));
+        $intakes = $this->Intake->find('all');
+
+        if (count($intakes) > 0) {
+            $this->set('preloader', true);
+            $this->set('image', 'intake.jpg');
+        }
+
+        $this->set('intakes', $intakes);
     }
 
     /**

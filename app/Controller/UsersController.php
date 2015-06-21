@@ -54,9 +54,9 @@ class UsersController extends AppController {
     }
 
     /**
-     * Loads the user's news feed.
+     * Loads the user's account.
      */
-    public function newsfeed() {
+    public function account() {
         $user = $this->User->findById($this->Auth->user('id'));
         $this->set('user', $user);
     }

@@ -23,11 +23,6 @@
                 <?php echo $this->Html->link('<i class="mdi-editor-format-size left"></i>' . AuthComponent::user('tokens'),
                     '/output/manage', array('escape' => false)); ?>
             </li>
-
-            <!-- Greeting -->
-            <li>
-                <a href="javascript:void(0);">Hi, <?php echo AuthComponent::user('name'); ?>!</a>
-            </li>
         </ul>
     </div>
 </nav>

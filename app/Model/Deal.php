@@ -41,8 +41,8 @@ class Deal extends AppModel {
 	public $hasAndBelongsToMany = array(
 		'User' => array(
 			'className' => 'User',
-			'joinTable' => 'incentives_users',
-			'foreignKey' => 'incentive_id',
+			'joinTable' => 'deals_users',
+			'foreignKey' => 'deal_id',
 			'associationForeignKey' => 'user_id',
 			'unique' => 'keepExisting',
 			'conditions' => '',

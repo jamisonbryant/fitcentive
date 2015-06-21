@@ -20,12 +20,12 @@
         <?php echo $this->Html->link('News Feed', '/users/newsfeed', array('class' => 'white-text')); ?>
     </li>
 
-    <li class="bold">
+    <!-- Action links -->
+    <li>
         <i class="mdi-image-tag-faces small grey-text text-lighten-1"></i>
-        <?php echo $this->Html->link('Goals', '/users/goals', array('class' => 'white-text')); ?>
+        <?php echo $this->Html->link('Goals', '/goals/manage', array('class' => 'white-text')); ?>
     </li>
 
-    <!-- Action links -->
     <li>
         <i class="mdi-maps-local-restaurant small grey-text text-lighten-1"></i>
         <?php echo $this->Html->link('Food', '/users/intakes', array('class' => 'white-text')); ?>

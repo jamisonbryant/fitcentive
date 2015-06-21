@@ -29,6 +29,9 @@
         <!-- Preloader -->
         <?php if (isset($preloader) && $preloader === true) echo $this->element('preloader'); ?>
 
+       <!-- Toast -->
+        <?php if (isset($toast) && !empty($toast)) echo $this->element('toast', array('text' => $toast)) ?>
+
         <!-- Body -->
         <main id="body">
             <div class="container">

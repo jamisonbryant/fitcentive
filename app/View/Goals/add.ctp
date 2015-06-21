@@ -1,21 +1,23 @@
-<div class="goals form">
-<?php echo $this->Form->create('Goal'); ?>
-	<fieldset>
-		<legend><?php echo __('Add Goal'); ?></legend>
-	<?php
-		echo $this->Form->input('name');
-		echo $this->Form->input('description');
-		echo $this->Form->input('user_id');
-	?>
-	</fieldset>
-<?php echo $this->Form->end(__('Submit')); ?>
-</div>
-<div class="actions">
-	<h3><?php echo __('Actions'); ?></h3>
-	<ul>
+<?php $this->assign('title', 'Add Goal'); ?>
 
-		<li><?php echo $this->Html->link(__('List Goals'), array('action' => 'index')); ?></li>
-		<li><?php echo $this->Html->link(__('List Users'), array('controller' => 'users', 'action' => 'index')); ?> </li>
-		<li><?php echo $this->Html->link(__('New User'), array('controller' => 'users', 'action' => 'add')); ?> </li>
-	</ul>
-</div>
+<h2>Add Goal</h2>
+
+<?php echo $this->Form->create('Goal', array('inputDefaults' => array('div' => false, 'label' => false))); ?>
+    <div class="row">
+        <div class="col input-field s12 m12 l12">
+            <?php echo $this->Form->input('name', array('id' => 'name',
+                'placeholder' => 'In 10 words or less, describe your goal.')); ?>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col input-field s12 m12 l12">
+            <?php echo $this->Form->input('description', array('class' => 'materialize-textarea', 'id' => 'description',
+                'placeholder' => 'Put any extra details about your goal here.')); ?>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col s12 m12 l12">
+            <button class="waves-effect waves-light btn orange"><i class="mdi-content-send right"></i>Submit</button>
+        </div>
+    </div>
+<?php echo $this->Form->end(); ?>

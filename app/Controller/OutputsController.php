@@ -10,7 +10,14 @@ class OutputsController extends AppController {
      * Manage action
      */
     public function manage() {
-        $this->set('outputs', $this->Output->find('all'));
+        $outputs = $this->Output->find('all');
+
+        if (count($outputs) > 0) {
+            $this->set('preloader', true);
+            $this->set('image', 'output.jpg');
+        }
+
+        $this->set('outputs', $outputs);
     }
 
     /**

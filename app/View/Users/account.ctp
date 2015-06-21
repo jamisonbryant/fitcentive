@@ -7,14 +7,23 @@
     }
 
     span.tag {
-        font-weight: 100;
         background: #9ccc65;
-        margin: 5px;
-        padding: 5px 7px;
-        color: #ffffff;
         border-radius: 3px;
+        color: #ffffff;
         display: inline-block;
         float: left;
+        font-weight: 100;
+        margin: 5px;
+        padding: 5px 7px;
+    }
+
+    #interests {
+        margin-bottom: 20px;
+    }
+
+    img.friend {
+        width: 50px;
+        margin: 3px;
     }
 </style>
 
@@ -58,15 +67,23 @@
         </table>
     </div>
     <div class="col l6">
-        <h4>Interests</h4>
-        <span class="tag">Kickboxing</span>
-        <span class="tag">Barre</span>
-        <span class="tag">Surfing</span>
-        <span class="tag">Museums</span>
-        <span class="tag">Painting</span>
-        <span class="tag">Dancing</span>
-        <span class="tag">Nightlife</span>
-        <span class="tag">Horseback riding</span>
-        <span class="tag">Blogging</span>
+        <div id="interests" class="row">
+            <h4>Interests</h4>
+            <span class="tag">Kickboxing</span>
+            <span class="tag">Barre</span>
+            <span class="tag">Surfing</span>
+            <span class="tag">Museums</span>
+            <span class="tag">Painting</span>
+            <span class="tag">Dancing</span>
+            <span class="tag">Nightlife</span>
+            <span class="tag">Horseback riding</span>
+            <span class="tag">Blogging</span>
+        </div>
+        <div id="friends" class="row">
+            <h4>Friends</h4>
+            <?php foreach(range(1, 8) as $i): ?>
+                <?php echo $this->Html->image('friend' . $i . '.jpg', array('class' => 'friend circle z-depth-1')); ?>
+            <?php endforeach; ?>
+        </div>
     </div>
 </div>

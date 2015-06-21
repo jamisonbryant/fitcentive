@@ -21,7 +21,8 @@
             </li>
 
             <li>
-                <?php echo $this->Html->link('<i class="mdi-editor-format-size left"></i>' . AuthComponent::user('tokens'),
+                <?php echo $this->Html->link('<i class="mdi-editor-format-size left"></i>' .
+                    (!empty(AuthComponent::user('tokens')) ? AuthComponent::user('tokens') : 0),
                     '/output/manage', array('escape' => false)); ?>
             </li>
         </ul>

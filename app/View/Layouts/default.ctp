@@ -13,7 +13,7 @@
 
         <!-- Stylesheets -->
         <?php echo $this->Html->css('materialize/materialize.min'); ?>
-        <?php echo $this->Html->css('default'); ?>
+        <?php echo $this->Html->css('default.min'); ?>
     </head>
     <body>
         <!-- Sidebar -->

@@ -25,13 +25,17 @@
         width: 50px;
         margin: 3px;
     }
+
+    .flow-text i {
+        vertical-align: middle;
+    }
 </style>
 
 <div class="row">
     <div class="col l12">
         <?php echo $this->Html->image('friend' . rand(1, 8) . '.jpg', array('class' => 'left circle')); ?>
         <h3>Fitcentive User</h3>
-        <p class="flow-text">From Washington, DC - User for 3 weeks</p>
+        <p class="flow-text">Washington, DC &mdash; 330 <i class="mdi-editor-format-size small"></i></p>
     </div>
 </div>
 

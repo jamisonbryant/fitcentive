@@ -25,6 +25,11 @@
                     (!empty(AuthComponent::user('tokens')) ? AuthComponent::user('tokens') : 0),
                     '/output/manage', array('escape' => false)); ?>
             </li>
+
+            <li>
+                <?php echo $this->Html->link('<i class="mdi-action-lock-open left"></i>',
+                    '/users/logout', array('escape' => false)); ?>
+            </li>
         </ul>
     </div>
 </nav>

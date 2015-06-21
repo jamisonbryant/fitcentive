@@ -22,4 +22,19 @@ App::uses('Controller', 'Controller');
  * @link		http://book.cakephp.org/2.0/en/controllers.html#the-app-controller
  */
 class AppController extends Controller {
+    /**
+     * @var array Components used
+     */
+    public $components = array('Auth', 'Session');
+
+    /**
+     * Performs tasks after the action is completed, but before the view is rendered.
+     */
+    public function afterFilter()
+    {
+        // Handle toast if present
+        if ($this->Session->check('toast')) {
+            $this->Session->delete('toast');
+        }
+    }
 }

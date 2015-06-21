@@ -3,12 +3,11 @@
 <script>
     $(document).ready(function() {
         // Hide form
-        $('#form').hide();
+        $('#form .card').hide();
 
         $('#buttons a').on('click', function(e) {
-            if ($('#form').is(':hidden')) {
+            if ($('#form .card').is(':hidden')) {
                 e.preventDefault();
-                console.debug('Form is hidden');
             } else {
                 $('#form form').submit();
                 e.preventDefault();
@@ -25,20 +24,16 @@
                 $(this).remove();
             });
 
-            $('#form').fadeIn(1000);
+            $('#form .card').fadeIn(1000);
         });
     });
 </script>
 
 
 <style>
-    #form {
-        margin: 0 auto;
+    #form .card {
+        margin: 0 auto 25px auto;
         width: 350px;
-    }
-
-    #form form {
-        margin-bottom: 35px;
     }
 
     #buttons {
@@ -68,37 +63,31 @@
     <?php echo $this->Form->create('User', array('inputDefaults' => array('div' => false, 'label' => false))); ?>
         <div class="card">
             <div class="card-content">
-                <div class="row">
-                    <div class="col input-field s12 m12 l12">
-                        <?php echo $this->Form->input('email', array('id' => 'email', 'placeholder' => 'Your email')); ?>
-                    </div>
+                <div class="input-field">
+                    <?php echo $this->Form->input('email', array('id' => 'email', 'placeholder' => 'Email')); ?>
                 </div>
-                <div class="row">
-                    <div class="col input-field s12 m12 l12">
-                        <?php echo $this->Form->input('password', array('id' => 'password', 'placeholder' => 'Your password')); ?>
-                    </div>
+                <div class="input-field">
+                    <?php echo $this->Form->input('password', array('id' => 'password', 'placeholder' => 'Password')); ?>
                 </div>
             </div>
+        </div>
+
+        <div id="buttons">
+            <?php echo $this->Html->link('Log In With Facebook', '/users/login',
+                array('class' => 'btn-large waves-effect waves-light indigo darken-2', 'id' => 'facebook')); ?>
+
+            <?php echo $this->Html->link('Log In With Twitter', '/users/login',
+                array('class' => 'btn-large waves-effect waves-light blue', 'id' => 'twitter')); ?>
+
+            <?php echo $this->Html->link('Log In With Google+', '/users/login',
+                array('class' => 'btn-large waves-effect waves-light red darken-1', 'id' => 'google')); ?>
+
+            <?php echo $this->Html->link('Log In With Fitcentive', '/users/login',
+                array('class' => 'btn-large waves-effect waves-light red lighten-2', 'id' => 'fitcentive')); ?>
         </div>
     <?php echo $this->Form->end(); ?>
 </div>
 
-<!-- Login links -->
-<div id="buttons">
-    <?php echo $this->Html->link('Log In With Facebook', '/users/login',
-        array('class' => 'btn-large waves-effect waves-light indigo darken-2', 'id' => 'facebook')); ?>
-
-    <?php echo $this->Html->link('Log In With Twitter', '/users/login',
-        array('class' => 'btn-large waves-effect waves-light blue', 'id' => 'twitter')); ?>
-
-    <?php echo $this->Html->link('Log In With Google+', '/users/login',
-        array('class' => 'btn-large waves-effect waves-light red darken-1', 'id' => 'google')); ?>
-
-    <?php echo $this->Html->link('Log In With Fitcentive', '/users/login',
-        array('class' => 'btn-large waves-effect waves-light red lighten-2', 'id' => 'fitcentive')); ?>
-</div>
-
-<!-- Register link -->
 <p id="register">
     <?php echo $this->Html->link('I don\'t have an account yet, sign me up!', 'javascript:void(0);'); ?>
 </p>

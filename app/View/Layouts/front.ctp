@@ -18,6 +18,13 @@
     <body>
         <!-- Body -->
         <main id="body">
+            <!-- Toast -->
+            <?php
+                if ($text = $this->Session->read('toast')) {
+                    echo $this->element('toast', array('text' => $text));
+                }
+            ?>
+
             <!-- Logo -->
             <div id="logo">
                 <?php echo $this->Html->image('logo.png'); ?>

@@ -15,10 +15,15 @@ class UsersController extends AppController {
         // Set layout
 		$this->layout = 'front';
 
+        // Handle login
         if ($this->request->is('post')) {
-            echo 'Email: ' . $this->request->data['User']['email'];
-            echo 'Password: ' . $this->request->data['User']['password'];
-            die();
+            // Look up user
+            if ($user = $this->User->findByEmail($this->request->data['User']['email'])) {
+                $this->Auth->login($user);
+                $this->Session->write('toast', 'Welcome back to Fitcentive, ' . $user['User']['name'] . '!');
+            } else {
+                $this->Session->write('toast', 'Hmm...we don\'t recognize that login. Try again?');
+            }
         }
 	}
 }

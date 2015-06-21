@@ -6,6 +6,14 @@
         $('#form').hide();
 
         $('#buttons a').on('click', function(e) {
+            if ($('#form').is(':hidden')) {
+                e.preventDefault();
+                console.debug('Form is hidden');
+            } else {
+                $('#form form').submit();
+                e.preventDefault();
+            }
+
             // Shrink logo
             $('#logo img').animate({ "margin-top": "-50px", "width": "25%" }, 500);
 
@@ -18,8 +26,6 @@
             });
 
             $('#form').fadeIn(1000);
-
-            e.preventDefault();
         });
     });
 </script>
@@ -59,7 +65,7 @@
 
 <!-- Form -->
 <div id="form">
-    <?php echo $this->Form->create('Goal', array('inputDefaults' => array('div' => false, 'label' => false))); ?>
+    <?php echo $this->Form->create('User', array('inputDefaults' => array('div' => false, 'label' => false))); ?>
         <div class="card">
             <div class="card-content">
                 <div class="row">
@@ -79,16 +85,16 @@
 
 <!-- Login links -->
 <div id="buttons">
-    <?php echo $this->Html->link('Log In With Facebook', '/users/login/facebook',
+    <?php echo $this->Html->link('Log In With Facebook', '/users/login',
         array('class' => 'btn-large waves-effect waves-light indigo darken-2', 'id' => 'facebook')); ?>
 
-    <?php echo $this->Html->link('Log In With Twitter', '/users/login/twitter',
+    <?php echo $this->Html->link('Log In With Twitter', '/users/login',
         array('class' => 'btn-large waves-effect waves-light blue', 'id' => 'twitter')); ?>
 
-    <?php echo $this->Html->link('Log In With Google+', '/users/login/google',
+    <?php echo $this->Html->link('Log In With Google+', '/users/login',
         array('class' => 'btn-large waves-effect waves-light red darken-1', 'id' => 'google')); ?>
 
-    <?php echo $this->Html->link('Log In With Fitcentive', '/users/login/fitcentive',
+    <?php echo $this->Html->link('Log In With Fitcentive', '/users/login',
         array('class' => 'btn-large waves-effect waves-light red lighten-2', 'id' => 'fitcentive')); ?>
 </div>
 

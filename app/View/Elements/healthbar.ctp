@@ -22,7 +22,7 @@
 
 <div id="healthbar" class="hide-on-med-and-down valign-wrapper">
     Level <span class="valign"><?php echo $user_level; ?></span>
-    <div class="progress red darken-2 valign">
+    <div class="progress green darken-2 valign">
         <div class="determinate white" style="width: <?php echo $completion; ?>%"></div>
     </div>
     Level <span class="valign"><?php echo $next_level; ?></span>

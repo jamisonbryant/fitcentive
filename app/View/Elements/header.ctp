@@ -1,4 +1,4 @@
-<nav>
+<nav class="light-green lighten-1">
     <div class="nav-wrapper">
         <?php echo $this->Html->link($this->fetch('title'), $this->here, array('id' => 'title')); ?>
 

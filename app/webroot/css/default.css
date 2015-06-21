@@ -29,6 +29,11 @@ header nav a#title {
     line-height: 75px;
 }
 
+header nav li {
+    height: 75px;
+    padding-top: 5px;
+}
+
 /*
  * Footer
  */

@@ -22,7 +22,7 @@
 
     <!-- Action links -->
     <li>
-        <i class="mdi-navigation-check small grey-text text-lighten-1"></i>
+        <i class="mdi-action-done-all small grey-text text-lighten-1"></i>
         <?php echo $this->Html->link('Goals', '/goals/manage', array('class' => 'white-text')); ?>
     </li>
 

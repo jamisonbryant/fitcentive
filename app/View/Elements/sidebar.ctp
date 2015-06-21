@@ -28,12 +28,12 @@
 
     <li>
         <i class="mdi-maps-local-restaurant small grey-text text-lighten-1"></i>
-        <?php echo $this->Html->link('Food', '/users/intakes', array('class' => 'white-text')); ?>
+        <?php echo $this->Html->link('Food', '/intakes/manage', array('class' => 'white-text')); ?>
     </li>
 
     <li>
         <i class="mdi-maps-directions-bike small grey-text text-lighten-1"></i>
-        <?php echo $this->Html->link('Exercise', '/users/outputs', array('class' => 'white-text')); ?>
+        <?php echo $this->Html->link('Exercise', '/outputs/manage', array('class' => 'white-text')); ?>
     </li>
 
     <li>

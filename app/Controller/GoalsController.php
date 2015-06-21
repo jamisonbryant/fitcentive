@@ -22,6 +22,7 @@ class GoalsController extends AppController {
 
             if ($this->Goal->save($this->request->data)) {
                 $this->set('flash', 'Goal added!');
+                return $this->redirect('/goals/manage');
             }
 
             $this->set('flash', 'Something went wrong :(');

@@ -1,6 +1,6 @@
-<?php $this->assign('title', 'Add Goal'); ?>
+<?php $this->assign('title', 'Edit Goal'); ?>
 
-<h2>Add Goal</h2>
+<h2>Edit Goal</h2>
 
 <?php echo $this->Form->create('Goal', array('inputDefaults' => array('div' => false, 'label' => false))); ?>
     <div class="row">

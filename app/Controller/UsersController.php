@@ -54,7 +54,7 @@ class UsersController extends AppController {
         // Sum up user's intakes
         $total = 0;
 
-        if (!is_null($user['Intake'])) {
+        if (!is_null(@$user['Intake'])) {
             foreach ($user['Intake'] as $intake) {
                 $total += round($intake['value'] * $intake['amount']);
             }
@@ -65,7 +65,7 @@ class UsersController extends AppController {
         // Sum up user's outputs
         $total = 0;
 
-        if (!is_null($user['Output'])) {
+        if (!is_null(@$user['Output'])) {
             foreach ($user['Output'] as $output) {
                 $total += round($output['value'] * $output['amount']);
             }

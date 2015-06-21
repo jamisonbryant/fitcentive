@@ -1,42 +1,32 @@
 <?php $this->assign('title', 'Browse Deals'); ?>
 
+<style>
+    h5 {
+        font-size: 20px;
+    }
+</style>
+
 <?php if (count($deals) > 0): ?>
     <h2>Browse Deals</h2>
 
-    <div class="section white">
-        <table class="hoverable responsive-table">
-            <thead>
-                <tr>
-                    <th>#</th>
-                    <th>Name</th>
-                    <th>Description</th>
-                    <th>Actions</th>
-                </tr>
-            </thead>
-                <tbody>
-                <?php foreach ($deals as $n => $deal): ?>
-                    <tr>
-                        <td><?php echo $n + 1; ?></td>
-                        <td><?php echo $deal['Deal']['name']; ?></td>
-                        <td class="truncate">
-                            <?php echo !empty($deal['Deal']['description']) ? $deal['Deal']['description'] : '--'; ?>
-                        </td>
-                        <td class="actions">
-                            <?php
-                            echo $this->Html->link($this->Html->tag('i', '', array('class' => 'mdi-action-visibility')),
-                                '/deals/view/' . $deal['Deal']['id'], array('escape' => false));
-
-                            echo $this->Html->link($this->Html->tag('i', '', array('class' => 'mdi-editor-mode-edit')),
-                                '/deals/edit/' . $deal['Deal']['id'], array('escape' => false));
-
-                            echo $this->Form->postLink($this->Html->tag('i', '', array('class' => 'mdi-action-delete')),
-                                '/deals/delete/' . $deal['Deal']['id'], array('escape' => false));
-                            ?>
-                        </td>
-                    </tr>
-                <?php endforeach; ?>
-            </tbody>
-        </table>
+    <div class="row">
+        <?php foreach ($deals as $deal): ?>
+            <div class="col l4">
+                <div class="card small">
+                    <div class="card-image">
+                        <?php echo $this->Html->image($deal['Deal']['banner']); ?>
+                    </div>
+                    <div class="card-content">
+                        <h5><?php echo $deal['Deal']['name']; ?></h5>
+                        <?php echo $this->Html->link($deal['Partner']['name'], 'javascript:void(0);',
+                            array('class' => 'grey-text')); ?>
+                        <p class="right">
+                            <a class="btn orange" href="javascript:void(0);">Claim</a>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        <?php endforeach; ?>
     </div>
 <?php else: ?>
     <div id="empty">

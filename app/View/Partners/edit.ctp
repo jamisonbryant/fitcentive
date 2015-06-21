@@ -16,7 +16,7 @@
 
 		<li><?php echo $this->Form->postLink(__('Delete'), array('action' => 'delete', $this->Form->value('Partner.id')), array(), __('Are you sure you want to delete # %s?', $this->Form->value('Partner.id'))); ?></li>
 		<li><?php echo $this->Html->link(__('List Partners'), array('action' => 'index')); ?></li>
-		<li><?php echo $this->Html->link(__('List Incentives'), array('controller' => 'incentives', 'action' => 'index')); ?> </li>
+		<li><?php echo $this->Html->link(__('List Deals'), array('controller' => 'incentives', 'action' => 'index')); ?> </li>
 		<li><?php echo $this->Html->link(__('New Incentive'), array('controller' => 'incentives', 'action' => 'add')); ?> </li>
 	</ul>
 </div>

@@ -23,8 +23,8 @@ class Partner extends AppModel {
  * @var array
  */
 	public $hasMany = array(
-		'Incentive' => array(
-			'className' => 'Incentive',
+		'Deal' => array(
+			'className' => 'Deal',
 			'foreignKey' => 'partner_id',
 			'dependent' => false,
 			'conditions' => '',

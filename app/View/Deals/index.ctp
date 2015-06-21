@@ -1,5 +1,5 @@
 <div class="incentives index">
-	<h2><?php echo __('Incentives'); ?></h2>
+	<h2><?php echo __('Deals'); ?></h2>
 	<table cellpadding="0" cellspacing="0">
 	<thead>
 	<tr>

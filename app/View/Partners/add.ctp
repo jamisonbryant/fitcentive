@@ -14,7 +14,7 @@
 	<ul>
 
 		<li><?php echo $this->Html->link(__('List Partners'), array('action' => 'index')); ?></li>
-		<li><?php echo $this->Html->link(__('List Incentives'), array('controller' => 'incentives', 'action' => 'index')); ?> </li>
+		<li><?php echo $this->Html->link(__('List Deals'), array('controller' => 'incentives', 'action' => 'index')); ?> </li>
 		<li><?php echo $this->Html->link(__('New Incentive'), array('controller' => 'incentives', 'action' => 'add')); ?> </li>
 	</ul>
 </div>

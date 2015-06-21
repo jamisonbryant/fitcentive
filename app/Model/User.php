@@ -61,6 +61,19 @@ class User extends AppModel {
  * @var array
  */
 	public $hasAndBelongsToMany = array(
+        'Deal' => array(
+            'className' => 'Deal',
+            'joinTable' => 'deals_users',
+            'foreignKey' => 'user_id',
+            'associationForeignKey' => 'deal_id',
+            'unique' => 'keepExisting',
+            'conditions' => '',
+            'fields' => '',
+            'order' => '',
+            'limit' => '',
+            'offset' => '',
+            'finderQuery' => '',
+        ),
 		'Event' => array(
 			'className' => 'Event',
 			'joinTable' => 'events_users',
@@ -73,20 +86,6 @@ class User extends AppModel {
 			'limit' => '',
 			'offset' => '',
 			'finderQuery' => '',
-		),
-		'Incentive' => array(
-			'className' => 'Incentive',
-			'joinTable' => 'incentives_users',
-			'foreignKey' => 'user_id',
-			'associationForeignKey' => 'incentive_id',
-			'unique' => 'keepExisting',
-			'conditions' => '',
-			'fields' => '',
-			'order' => '',
-			'limit' => '',
-			'offset' => '',
-			'finderQuery' => '',
 		)
 	);
-
 }

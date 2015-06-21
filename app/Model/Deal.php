@@ -1,12 +1,12 @@
 <?php
 App::uses('AppModel', 'Model');
 /**
- * Incentive Model
+ * Deal Model
  *
  * @property Partner $Partner
  * @property User $User
  */
-class Incentive extends AppModel {
+class Deal extends AppModel {
 
 /**
  * Display field

@@ -43,7 +43,7 @@
 	<ul>
 		<li><?php echo $this->Html->link(__('Edit Incentive'), array('action' => 'edit', $incentive['Incentive']['id'])); ?> </li>
 		<li><?php echo $this->Form->postLink(__('Delete Incentive'), array('action' => 'delete', $incentive['Incentive']['id']), array(), __('Are you sure you want to delete # %s?', $incentive['Incentive']['id'])); ?> </li>
-		<li><?php echo $this->Html->link(__('List Incentives'), array('action' => 'index')); ?> </li>
+		<li><?php echo $this->Html->link(__('List Deals'), array('action' => 'index')); ?> </li>
 		<li><?php echo $this->Html->link(__('New Incentive'), array('action' => 'add')); ?> </li>
 		<li><?php echo $this->Html->link(__('List Partners'), array('controller' => 'partners', 'action' => 'index')); ?> </li>
 		<li><?php echo $this->Html->link(__('New Partner'), array('controller' => 'partners', 'action' => 'add')); ?> </li>

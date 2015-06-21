@@ -35,12 +35,12 @@
 		<li><?php echo $this->Form->postLink(__('Delete Partner'), array('action' => 'delete', $partner['Partner']['id']), array(), __('Are you sure you want to delete # %s?', $partner['Partner']['id'])); ?> </li>
 		<li><?php echo $this->Html->link(__('List Partners'), array('action' => 'index')); ?> </li>
 		<li><?php echo $this->Html->link(__('New Partner'), array('action' => 'add')); ?> </li>
-		<li><?php echo $this->Html->link(__('List Incentives'), array('controller' => 'incentives', 'action' => 'index')); ?> </li>
+		<li><?php echo $this->Html->link(__('List Deals'), array('controller' => 'incentives', 'action' => 'index')); ?> </li>
 		<li><?php echo $this->Html->link(__('New Incentive'), array('controller' => 'incentives', 'action' => 'add')); ?> </li>
 	</ul>
 </div>
 <div class="related">
-	<h3><?php echo __('Related Incentives'); ?></h3>
+	<h3><?php echo __('Related Deals'); ?></h3>
 	<?php if (!empty($partner['Incentive'])): ?>
 	<table cellpadding = "0" cellspacing = "0">
 	<tr>

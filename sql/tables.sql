@@ -40,7 +40,7 @@ CREATE TABLE events_users (
   modified DATETIME DEFAULT NULL
 );
 
-CREATE TABLE incentives (
+CREATE TABLE deals (
   id INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
   name VARCHAR(50) NOT NULL,
   description TEXT NOT NULL,
@@ -50,9 +50,9 @@ CREATE TABLE incentives (
   modified DATETIME DEFAULT NULL
 );
 
-CREATE TABLE incentives_users (
+CREATE TABLE deals_users (
   id INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
-  incentive_id INT NOT NULL,
+  deal_id INT NOT NULL,
   user_id INT NOT NULL,
   created DATETIME DEFAULT NULL,
   modified DATETIME DEFAULT NULL

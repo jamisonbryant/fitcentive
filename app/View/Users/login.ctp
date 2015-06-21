@@ -9,6 +9,19 @@
     #buttons .btn-large:not(:last-of-type) {
         margin-right: 15px;
     }
+
+    #register {
+        margin-top: 40px;
+        text-align: center;
+    }
+
+    #register a {
+        color: #ffffff;
+    }
+
+    #register a:hover {
+        text-decoration: underline;
+    }
 </style>
 
 <!-- Login links -->
@@ -25,3 +38,8 @@
     <?php echo $this->Html->link('Log In With Fitcentive', '/users/login/fitcentive',
         array('class' => 'btn-large waves-effect waves-light pink lighten-2')); ?>
 </div>
+
+<!-- Register link -->
+<p id="register">
+    <?php echo $this->Html->link('I don\'t have an account yet, sign me up!', 'javascript:void(0);'); ?>
+</p>

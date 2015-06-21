@@ -10,7 +10,14 @@ class GoalsController extends AppController {
      * Manage action
      */
     public function manage() {
-        $this->set('goals', $this->Goal->find('all'));
+        $goals = $this->Goal->find('all');
+
+        if (count($goals) > 0) {
+            $this->set('preloader', true);
+            $this->set('image', 'goal.jpg');
+        }
+
+        $this->set('goals', $goals);
     }
 
     /**

@@ -21,8 +21,8 @@
     </li>
 
     <li class="bold">
-        <i class="mdi-social-people small grey-text text-lighten-1"></i>
-        <?php echo $this->Html->link('Friends', '/users/friends', array('class' => 'white-text')); ?>
+        <i class="mdi-image-tag-faces small grey-text text-lighten-1"></i>
+        <?php echo $this->Html->link('Goals', '/users/goals', array('class' => 'white-text')); ?>
     </li>
 
     <!-- Action links -->
@@ -30,17 +30,20 @@
         <i class="mdi-maps-local-restaurant small grey-text text-lighten-1"></i>
         <?php echo $this->Html->link('Food', '/users/intakes', array('class' => 'white-text')); ?>
     </li>
+
     <li>
         <i class="mdi-maps-directions-bike small grey-text text-lighten-1"></i>
         <?php echo $this->Html->link('Exercise', '/users/outputs', array('class' => 'white-text')); ?>
     </li>
+
     <li>
         <i class="mdi-maps-pin-drop small grey-text text-lighten-1"></i>
         <?php echo $this->Html->link('Events', '/events/browse', array('class' => 'white-text')); ?>
     </li>
+
     <li>
         <i class="mdi-maps-local-play small grey-text text-lighten-1"></i>
-        <?php echo $this->Html->link('Incentives', '/incentives/browse', array('class' => 'white-text')); ?>
+        <?php echo $this->Html->link('Deals', '/deals/browse', array('class' => 'white-text')); ?>
     </li>
 
     <!-- Other links -->

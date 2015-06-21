@@ -4,6 +4,11 @@
     h5 {
         font-size: 20px;
     }
+
+    img.profile {
+        margin: 5px 2px;
+        height: 32px;
+    }
 </style>
 
 <?php if (count($deals) > 0): ?>
@@ -25,6 +30,18 @@
                         </p>
                     </div>
                 </div>
+                <p class="friends grey-text">
+                    Friends claiming this deal: <br />
+                    <?php
+                        $friends = range(1, 8);
+                        shuffle($friends);
+
+                        for ($i = 0; $i < rand(1, 4); $i++) {
+                            echo $this->Html->image('friend' . $friends[$i] . '.jpg',
+                                array('class' => 'profile circle z-depth-1'));
+                        }
+                    ?>
+                </p>
             </div>
         <?php endforeach; ?>
     </div>

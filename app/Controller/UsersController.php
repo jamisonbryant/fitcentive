@@ -46,9 +46,17 @@ class UsersController extends AppController {
     }
 
     /**
-     * Loads the user's dashoard.
+     * Loads the user's dashboard.
      */
     public function dashboard() {
+        $user = $this->User->findById($this->Auth->user('id'));
+        $this->set('user', $user);
+    }
+
+    /**
+     * Loads the user's news feed.
+     */
+    public function newsfeed() {
         $user = $this->User->findById($this->Auth->user('id'));
         $this->set('user', $user);
     }

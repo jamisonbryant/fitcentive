@@ -17,7 +17,7 @@
 
     <li class="bold">
         <i class="mdi-action-list small grey-text text-lighten-1"></i>
-        <?php echo $this->Html->link('News Feed', '/users/newsfeed', array('class' => 'white-text')); ?>
+        <?php echo $this->Html->link('Newsfeed', '/users/newsfeed', array('class' => 'white-text')); ?>
     </li>
 
     <!-- Action links -->

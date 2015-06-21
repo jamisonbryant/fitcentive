@@ -42,12 +42,18 @@ main {
     flex: 1 0 auto;
 }
 
-footer span#credit {
+footer span:first-of-type {
     padding-left: 30px;
 }
 
-footer span#version {
+footer span:last-of-type {
     padding-right: 30px;
+}
+
+footer span img {
+    height: 25px;
+    margin: 0 0 5px 5px;
+    vertical-align: middle;
 }
 
 /*

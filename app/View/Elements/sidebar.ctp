@@ -17,7 +17,7 @@
 
     <li class="bold">
         <i class="mdi-action-list small grey-text text-lighten-1"></i>
-        <?php echo $this->Html->link('Newsfeed', '/users/newsfeed', array('class' => 'white-text')); ?>
+        <?php echo $this->Html->link('Newsfeed', 'javascript:void(0);', array('class' => 'white-text')); ?>
     </li>
 
     <!-- Action links -->
@@ -38,7 +38,7 @@
 
     <li>
         <i class="mdi-maps-pin-drop small grey-text text-lighten-1"></i>
-        <?php echo $this->Html->link('Events', '/events/browse', array('class' => 'white-text')); ?>
+        <?php echo $this->Html->link('Events', 'javascript:void(0);', array('class' => 'white-text')); ?>
     </li>
 
     <li>

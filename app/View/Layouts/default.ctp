@@ -31,9 +31,6 @@
             <!-- Parallax -->
             <?php if (isset($image) && !empty($image)) echo $this->element('parallax', array('image' => $image)) ?>
 
-            <!-- Preloader -->
-            <?php if (isset($preloader) && $preloader === true) echo $this->element('preloader'); ?>
-
             <!-- Toast -->
             <?php if (isset($toast) && !empty($toast)) echo $this->element('toast', array('text' => $toast)) ?>
 

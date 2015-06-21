@@ -5,7 +5,7 @@
         <!-- Metadata -->
         <?php echo $this->Html->charset(); ?>
         <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
-        <title><?php echo $this->fetch('title'); ?> - Fitcentive</title>
+        <title><?php echo $this->fetch('title'); ?> - Park-n-Band</title>
 
         <!-- Scripts -->
         <?php echo $this->Html->script('jquery/jquery.min'); ?>
@@ -16,24 +16,8 @@
         <?php echo $this->Html->css('default'); ?>
     </head>
     <body>
-        <!-- Sidebar -->
-        <aside id="sidebar">
-            <?php echo $this->element('sidebar'); ?>
-        </aside>
-
-        <!-- Header -->
-        <header>
-            <?php echo $this->element('header'); ?>
-        </header>
-
         <!-- Body -->
         <main id="body">
-            <!-- Parallax -->
-            <?php if (isset($image) && !empty($image)) echo $this->element('parallax', array('image' => $image)) ?>
-
-            <!-- Preloader -->
-            <?php if (isset($preloader) && $preloader === true) echo $this->element('preloader'); ?>
-
             <!-- Toast -->
             <?php if (isset($toast) && !empty($toast)) echo $this->element('toast', array('text' => $toast)) ?>
 

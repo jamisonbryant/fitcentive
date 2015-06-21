@@ -46,6 +46,14 @@ class UsersController extends AppController {
     }
 
     /**
+     * Loads the user's dashoard.
+     */
+    public function dashboard() {
+        $user = $this->User->findById($this->Auth->user('id'));
+        $this->set('user', $user);
+    }
+
+    /**
      * Calculates a user's stats.
      */
     public function stats() {

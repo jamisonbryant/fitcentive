@@ -37,6 +37,7 @@
             <!-- Toast -->
             <?php if (isset($toast) && !empty($toast)) echo $this->element('toast', array('text' => $toast)) ?>
 
+            <!-- Content -->
             <div class="container">
                 <?php echo $this->fetch('content'); ?>
             </div>

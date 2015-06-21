@@ -40,7 +40,7 @@
     </div>
 <?php else: ?>
     <div id="empty">
-        <i class="mdi-image-tag-faces text-lighten-1 medium grey-text"></i>
+        <i class="mdi-navigation-check text-lighten-1 medium grey-text"></i>
         <h5 class="grey-text text-darken-2">No goals found</h5>
         <p class="grey-text text-darken-2">To add one, click the Add button on the bottom right of the screen.</p>
     </div>

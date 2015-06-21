@@ -9,6 +9,16 @@ class UsersController extends AppController {
 	public $scaffold;
 
     /**
+     * Performs tasks before action is executed.
+     */
+    public function beforeFilter() {
+        parent::beforeFilter();
+
+        // Allow access to certain pages w/o login
+        $this->Auth->allow('login');
+    }
+
+    /**
      * Logs a user in.
      */
 	public function login() {
@@ -27,4 +37,47 @@ class UsersController extends AppController {
             }
         }
 	}
+
+    /**
+     * Logs a user out.
+     */
+    public function logout() {
+        return $this->redirect($this->Auth->logout());
+    }
+
+    /**
+     * Calculates a user's stats.
+     */
+    public function stats() {
+        $user = $this->User->findById($this->Auth->user('id'));
+
+        // Sum up user's intakes
+        $total = 0;
+
+        if (!is_null($user['Intake'])) {
+            foreach ($user['Intake'] as $intake) {
+                $total += round($intake['value'] * $intake['amount']);
+            }
+        }
+
+        $stats['intake'] = $total;
+
+        // Sum up user's outputs
+        $total = 0;
+
+        if (!is_null($user['Output'])) {
+            foreach ($user['Output'] as $output) {
+                $total += round($output['value'] * $output['amount']);
+            }
+        }
+
+        $stats['output'] = $total;
+
+        // Return data
+        if (!empty($this->request->params['requested'])) {
+            return $stats;
+        } else {
+            $this->set('stats', $stats);
+        }
+    }
 }

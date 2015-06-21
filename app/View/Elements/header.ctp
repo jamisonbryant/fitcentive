@@ -9,14 +9,15 @@
             </li>
 
             <!-- Stats -->
+            <?php $stats = $this->requestAction('/users/stats'); ?>
             <li>
-                <?php echo $this->Html->link('<i class="mdi-maps-local-restaurant left"></i>1500', '/intake/manage',
-                    array('escape' => false)); ?>
+                <?php echo $this->Html->link('<i class="mdi-maps-local-restaurant left"></i>' . $stats['intake'],
+                    '/intake/manage', array('escape' => false)); ?> in
             </li>
 
             <li>
-                <?php echo $this->Html->link('<i class="mdi-maps-directions-bike left"></i>500', '/output/manage',
-                    array('escape' => false)); ?>
+                <?php echo $this->Html->link('<i class="mdi-maps-directions-bike left"></i>' . $stats['output'],
+                    '/output/manage', array('escape' => false)); ?> out
             </li>
 
             <li>

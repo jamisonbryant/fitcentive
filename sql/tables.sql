@@ -53,6 +53,7 @@ CREATE TABLE events_users (
 
 CREATE TABLE outputs (
   id INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
+  type VARCHAR(30) NOT NULL,
   amount INT NOT NULL,
   user_id INT NOT NULL,
   created DATETIME DEFAULT NULL,

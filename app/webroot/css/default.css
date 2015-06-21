@@ -56,6 +56,15 @@ footer span img {
     vertical-align: middle;
 }
 
+@media (max-width: 600px) {
+    footer span {
+        display: block;
+        padding: 0 !important;
+        text-align: center;
+        width: 100%;
+    }
+}
+
 /*
  * Sidebar
  */

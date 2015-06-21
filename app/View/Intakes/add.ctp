@@ -6,7 +6,7 @@
     <div class="row">
         <div class="col input-field s12 m12 l12">
             <?php echo $this->Form->input('type', array('id' => 'type',
-                'placeholder' => 'Start typing to search for a good...')); ?>
+                'placeholder' => 'Start typing to search for a food...')); ?>
         </div>
     </div>
     <div class="row">

@@ -41,7 +41,7 @@
     }
 
     #buttons .btn-large:not(:last-of-type) {
-        margin-right: 15px;
+        margin: 15px 10px;
     }
 
     #register {

@@ -2,9 +2,9 @@
     <div class="nav-wrapper">
         <?php echo $this->Html->link($this->fetch('title'), $this->here, array('id' => 'title')); ?>
 
-        <ul id="navmenu" class="right hide-on-med-and-down">
+        <ul id="navmenu" class="right">
             <!-- Healthbar -->
-            <li>
+            <li class="hide">
                 <?php echo $this->element('healthbar'); ?>
             </li>
 

@@ -12,17 +12,17 @@
             <?php $stats = $this->requestAction('/users/stats'); ?>
             <li>
                 <?php echo $this->Html->link('<i class="mdi-maps-local-restaurant left"></i>350',
-                    '/intake/manage', array('escape' => false)); ?> in
+                    'javascript:void(0);', array('escape' => false)); ?> in
             </li>
 
             <li>
                 <?php echo $this->Html->link('<i class="mdi-maps-directions-bike left"></i>1000',
-                    '/output/manage', array('escape' => false)); ?> out
+                    'javascript:void(0);', array('escape' => false)); ?> out
             </li>
 
             <li>
                 <?php echo $this->Html->link('<i class="mdi-editor-format-size left"></i>330',
-                    '/output/manage', array('escape' => false)); ?>
+                    'javascript:void(0);', array('escape' => false)); ?>
             </li>
 
             <li>
